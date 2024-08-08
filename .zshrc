@@ -92,3 +92,4 @@ export PATH="$HOME/.local/bin:$PATH"
 
 
 load-kitty-silently
+neo
