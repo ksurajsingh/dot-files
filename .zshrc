@@ -49,8 +49,8 @@ alias tolistend='cd /mnt/KSS/Media/tolisten/'
 alias enco='bluetoothctl connect 2C:FD:B4:7E:65:6A'
 alias poco='bluetoothctl connect 10:3F:44:8B:06:F2'
 alias down='cd ~/Downloads'
-alias wallpaper='cd ~/Pictures/wallpapers/'
-alias waldown='find ~/Downloads -type f \( -name "*.mp4" -o -name "*.jpeg" -o -name "*.jpg" -o -name "*.png" \) -exec mv {} ~/Pictures/wallpapers/ \;'
+alias wallpaper='cd ~/mnt/KSS/Media/wallpapers/'
+alias waldown='find ~/Downloads -type f \( -name "*.mp4" -o -name "*.jpeg" -o -name "*.jpg" -o -name "*.png" \) -exec mv {} ~/mnt/KSS/Media/wallpapers/ \;'
 alias zshup='cp ~/.zshrc ~/dot-files/.zshrc'
 alias ran='ranger'
 alias calc='deepin-calculator'
@@ -83,6 +83,7 @@ alias fast='fastfetch'
 alias gnu='cd /mnt/KSS/Studies/GNU/'
 alias pf='pfetch'
 alias gc=" git commit -am "$(date '+%Y-%m-%d %H-%M-%S')" "
+alias garuda='nmcli connection up "Garuda 2.4Ghz"'
 
 
 export PATH="$HOME/.local/bin:$PATH"
