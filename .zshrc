@@ -68,7 +68,7 @@ alias de='bash de'
 alias en='bash en'
 alias l='ls -al --color=never'
 alias lc='ls -al'
-alias dotpush='cd ~/dot-files && gc  &&gph'
+alias dotpush='cd ~/dot-files && gc  &&git push -f dots main'
 alias dotpull='cd ~/dot-files && gpl'
 alias zshdown='cp ~/dot-files/.zshrc ~/.zshrc && source ~/.zshrc'
 alias chgit=" git config --global user.name "Surajk013" && git config --global user.email "surajsinghk013@gmail.com" "
