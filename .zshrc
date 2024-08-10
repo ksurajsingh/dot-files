@@ -84,7 +84,7 @@ alias gnu='cd /mnt/KSS/Studies/GNU/'
 alias pf='pfetch'
 alias gc=" git commit -am "$(date '+%Y-%m-%d %H-%M-%S')" "
 alias garuda='nmcli connection up "Garuda 2.4Ghz"'
-alias scrot='scrot ~/Pictures/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
+alias ss='scrot ~/Pictures/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
 
 
 export PATH="$HOME/.local/bin:$PATH"
