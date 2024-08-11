@@ -57,8 +57,8 @@ alias calc='deepin-calculator'
 alias archup='yay -Scc & sudo pacman -Scc && sudo pacman -Syu'
 alias ttw='rsync -achPz --update /mnt/KSS/Media/towatch/* phone:/storage/E0BE-1F10/towatch/'
 alias ttl='rsync -avhPz --update /mnt/kSS/Media/tolisten/* phone:/storage/E0BE-1F10/tolisten'
-alias todoup='cd /mnt/KSS/Studies/todo/ && gc && git push todo main'
-alias tododown='cd /mnt/KSS/Studies/todo/ && git pull todo main'
+alias tdu='cd /mnt/KSS/Studies/todo/ && gc && git push todo main'
+alias tdd='cd /mnt/KSS/Studies/todo/ && git pull todo main'
 alias cod='vim /mnt/KSS/Studies/SPM/codes'
 alias ref='sudo reflector --country 'India' --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias ubuntuup='sudo apt update && sudo apt upgrade && sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove && sudo apt autoclean && sudo apt clean'
@@ -84,7 +84,7 @@ alias gnu='cd /mnt/KSS/Studies/GNU/'
 alias pf='pfetch'
 alias gc=" git commit -am "$(date '+%Y-%m-%d %H-%M-%S')" "
 alias garuda='nmcli connection up "Garuda 2.4Ghz"'
-alias ss='scrot ~/Pictures/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
+alias ss='scrot -s /mnt/KSS/Media/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
 
 
 export PATH="$HOME/.local/bin:$PATH"
@@ -93,4 +93,4 @@ export PATH="$HOME/.local/bin:$PATH"
 
 
 load-kitty-silently
-neo
+#neo
