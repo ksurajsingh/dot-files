@@ -55,10 +55,10 @@ alias waldown='find ~/Downloads -type f \( -name "*.mp4" -o -name "*.jpeg" -o -n
 alias zshup='cp ~/.zshrc ~/dot-files/.zshrc'
 alias ran='ranger'
 alias calc='deepin-calculator'
-alias archup='yay -Scc & sudo pacman -Scc && sudo pacman -Syu'
+alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu'
 alias ttw='rsync -achPz --update /mnt/KSS/Media/towatch/* phone:/storage/E0BE-1F10/towatch/'
 alias ttl='rsync -avhPz --update /mnt/kSS/Media/tolisten/* phone:/storage/E0BE-1F10/tolisten'
-alias tdu='cd /mnt/KSS/Studies/todo/ && gc && git push todo main'
+alias tdu='cd /mnt/KSS/Studies/todo/ && gc && git push -f todo main'
 alias tdd='cd /mnt/KSS/Studies/todo/ && git pull todo main'
 alias cod='vim /mnt/KSS/Studies/SPM/codes'
 alias ref='sudo reflector --country 'India' --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
@@ -67,7 +67,6 @@ alias lkey='gpg --list-keys --keyid-format long'
 alias lskey='gpg --list-secret-keys --keyid-format long'
 alias de='bash de'
 alias en='bash en'
-alias l='ls -al --color=never'
 alias lc='ls -al'
 alias dotpush='cd ~/dot-files && gc  &&git push -f dots main'
 alias dotpull='cd ~/dot-files && gpl'
@@ -87,7 +86,7 @@ alias gc=" git commit -am "$(date '+%Y-%m-%d %H-%M-%S')" "
 alias garuda='nmcli connection up "Garuda 2.4Ghz"'
 alias ss='scrot -s /mnt/KSS/Media/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
 alias nl='newlook'
-
+alias ll="ls -al --color=never"
 export PATH="$HOME/.local/bin:$PATH"
 
 
