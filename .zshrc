@@ -88,6 +88,7 @@ alias ss='scrot -s /mnt/KSS/Media/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
 alias nl='newlook'
 alias ll="ls -al --color=never"
 export PATH="$HOME/.local/bin:$PATH"
+alias pnl='pkill newlook'
 
 
 
