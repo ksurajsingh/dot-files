@@ -4,4 +4,4 @@ augroup autosave
     " Save file when there are changes
     autocmd TextChanged,TextChangedI * silent! wa
 augroup END
-
+set number
