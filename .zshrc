@@ -13,7 +13,7 @@ load-kitty-silently(){
 } &> /dev/null 
 
 
-#pokemon-colorscripts --no-title -r
+pokemon-colorscripts --no-title -r
 
    #Cursor changing color after every command
 cursor_change_color(){
@@ -32,7 +32,7 @@ alias todo='vim /mnt/KSS/Studies/todo/todo'
 alias todod='cd /mnt/KSS/Studies/todo/'
 alias spm='cd /mnt/KSS/Studies/SPM/'
 alias rvce='cd /mnt/KSS/Studies/RVCE/'
-alias sem='cd /mnt/KSS/Studies/RVCE/4thsem'
+alias sem='cd /mnt/KSS/Studies/RVCE/5thsem'
 alias backups='cd /mnt/KSS/Back_Ups'
 alias docs='cd /mnt/KSS/Documents/'
 alias scripts='cd ~/scripts'
