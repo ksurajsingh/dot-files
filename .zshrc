@@ -28,7 +28,7 @@ function postcmd(){
 precmd_functions+=(postcmd)
 
 alias clips='cd /mnt/KSS/Media/clips/ '
-alias todo='vim /mnt/KSS/Studies/todo/todo'
+alias todo='nvim /mnt/KSS/Studies/todo/todo'
 alias todod='cd /mnt/KSS/Studies/todo/'
 alias spm='cd /mnt/KSS/Studies/SPM/'
 alias rvce='cd /mnt/KSS/Studies/RVCE/'
@@ -40,7 +40,7 @@ alias media='cd /mnt/KSS/Media/'
 alias songs='cd /mnt/KSS/Media/Songs/'
 alias playsongs='mpv /mnt/KSS/Media/Songs/ --shuffle'
 alias hypr='cd ~/.config/hypr'
-alias zsh='vim ~/.zshrc'
+alias zsh='nvim ~/.zshrc'
 alias gs='git status'
 alias gph='git push'
 alias gpl='git pull'
@@ -60,9 +60,9 @@ alias calc='deepin-calculator'
 alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu'
 alias ttw='rsync -achPz --update /mnt/KSS/Media/towatch/* phone:/storage/E0BE-1F10/towatch/'
 alias ttl='rsync -avhPz --update /mnt/kSS/Media/tolisten/* phone:/storage/E0BE-1F10/tolisten'
-alias tdu='cd /mnt/KSS/Studies/todo/ && gc && git push -f todo main'
+alias tdu='cd /mnt/KSS/Studies/todo/ && ac && git push -f todo main'
 alias tdd='cd /mnt/KSS/Studies/todo/ && git pull todo main'
-alias cod='vim /mnt/KSS/Studies/SPM/codes'
+alias cod='nvim /mnt/KSS/Studies/SPM/codes'
 alias ref='sudo reflector --country 'India' --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias ubuntuup='sudo apt update && sudo apt upgrade && sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove && sudo apt autoclean && sudo apt clean'
 alias lkey='gpg --list-keys --keyid-format long'
@@ -70,7 +70,7 @@ alias lskey='gpg --list-secret-keys --keyid-format long'
 alias de='bash de'
 alias en='bash en'
 alias lc='ls -al'
-alias dotpush='cd ~/dot-files && gc  &&git push -f dots main'
+alias dotpush='cd ~/dot-files && ac  &&git push -f dots main'
 alias dotpull='cd ~/dot-files && git pull dots main'
 alias zshdown='cp ~/dot-files/.zshrc ~/.zshrc && source ~/.zshrc'
 alias chgit=" git config --global user.name "Surajk013" && git config --global user.email "surajsinghk013@gmail.com" "
@@ -84,14 +84,16 @@ alias uwu='uwufetch'
 alias fast='fastfetch'
 alias gnu='cd /mnt/KSS/Studies/GNU/'
 alias pf='pfetch'
-alias gc=" git commit -am "$(date '+%Y-%m-%d %H-%M-%S')" "
+alias ac=" git commit -am "$(date '+%Y-%m-%d %H-%M-%S')" "
+alias gc=" git commit -am "
 alias garuda='nmcli connection up "Garuda 2.4Ghz"'
 alias ss='scrot -s /mnt/KSS/Media/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
 alias nl='newlook'
 alias ll="ls -al --color=never"
-export PATH="$HOME/.local/bin:$PATH"
 alias pnl='pkill newlook'
+alias nv=nvim
 
+export PATH="$HOME/.local/bin:$PATH"
 
 
 
