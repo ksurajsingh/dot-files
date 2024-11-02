@@ -27,6 +27,7 @@ function postcmd(){
 
 precmd_functions+=(postcmd)
 
+alias sdd='cd /mnt/KSS/Studies/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
 alias todo='nvim /mnt/KSS/Studies/todo/todo'
 alias todod='cd /mnt/KSS/Studies/todo/'
