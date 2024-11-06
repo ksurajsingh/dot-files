@@ -1,32 +1,59 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="random"
 
-plugins=( 
+plugins=(
+    git
     archlinux
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
-load-kitty-silently(){
-	source $ZSH/oh-my-zsh.sh
-} &> /dev/null 
+function load_silent(){
+  source $ZSH/oh-my-zsh.sh 
+} &> /dev/null
 
+load_silent
 
-pokemon-colorscripts --no-title -r
+# Check archlinux plugin commands here
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/archlinux
 
-   #Cursor changing color after every command
+# Display Pokemon-colorscripts
+# Project page: https://gitlab.com/phoneybadger/pokemon-colorscripts#on-other-distros-and-macos
+#pokemon-colorscripts --no-title -s -r
+
+# fastfetch. Will be disabled if above colorscript was chosen to install
+fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
+# Set-up icons for files/folders in terminal
+alias ls='eza -a --icons'
+alias ll='eza -al --icons'
+alias lt='eza -a --tree --level=1 --icons'
+
+#change cursor color after each prompt
 cursor_change_color(){
-    hex=$(openssl rand -hex 3)
-    echo -ne "\e]12;#$hex\a"
+  hex=$(openssl rand -hex 3)
+  echo -ne "\e]12;#$hex\a"
 }
 
 function postcmd(){
-    cursor_change_color
+  cursor_change_color
 }
 
 precmd_functions+=(postcmd)
 
+# Set-up FZF key bindings (CTRL R for fuzzy history finder)
+source <(fzf --zsh)
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
+
+#setting alias for faster workflow
 alias sdd='cd /mnt/KSS/Studies/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
 alias todo='nvim /mnt/KSS/Studies/todo/todo'
@@ -92,9 +119,3 @@ alias ll="ls -al --color=never"
 alias pnl='pkill newlook'
 alias nv=nvim
 
-export PATH="$HOME/.local/bin:$PATH"
-
-
-
-load-kitty-silently
-#neo
