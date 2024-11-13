@@ -54,6 +54,12 @@ setopt appendhistory
 
 
 #setting alias for faster workflow
+alias dcim2backups='rsync -avhpz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/KSS/Back_Ups/POCO/DCIM/Camera/'
+alias ss2backups='mv ~/Pictures/Screenshots/ /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/'
+alias pnss2backups='rsync /storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/'
+alias ss2pn='rsync --avhPz --update /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ /storage/emulated/0/DCIM/Screenshots/ '
+alias routine2pc='rsync --avhPz --update /mnt/KSS/ pc:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" '
+alias routine2lap='rsync --avhPz --update /mnt/KSS/ lap:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" '
 alias spm2pn='rsync -avhPz --update spiderman.jpg phone:/storage/F563-C19B/SPM/'
 alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/mnt/KSS/Studies/SPM/'
 alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/mnt/KSS/Studies/SPM/'
