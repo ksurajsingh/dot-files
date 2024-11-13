@@ -54,17 +54,17 @@ setopt appendhistory
 
 
 #setting alias for faster workflow
-alias snapstudies='sudo btrfs subvolume snapshot /mnt/KSS/Studies /mnt/KSS/btrfssnapshots/Studies_snapshot_$(date +"%Y%m%d_%H%M%S") '
-alias snapdocs='sudo btrfs subvolume snapshot /mnt/KSS/Documents /mnt/KSS/btrfssnapshots/Documents_snapshot_$(date +"%Y%m%d_%H%M%S") '
-alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/Back_Ups /mnt/KSS/btrfssnapshots/Back_Ups_snapshot_$(date +"%Y%m%d_%H%M%S") '
-alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/btrfssnapshots/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
+alias snapstudies='sudo btrfs subvolume snapshot /mnt/KSS/Studies /mnt/KSS/.btrfssnapshots/Studies_snapshot_$(date +"%Y%m%d_%H%M%S") '
+alias snapdocs='sudo btrfs subvolume snapshot /mnt/KSS/Documents /mnt/KSS/.btrfssnapshots/Documents_snapshot_$(date +"%Y%m%d_%H%M%S") '
+alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/Back_Ups /mnt/KSS/.btrfssnapshots/Back_Ups_snapshot_$(date +"%Y%m%d_%H%M%S") '
+alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssnapshots/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapall='snapmedia & snapdocs & snapstudies & snapbackups'
 alias dcim2backups='rsync -avhpz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/KSS/Back_Ups/POCO/DCIM/Camera/'
 alias ss2backups='mv ~/Pictures/Screenshots/* /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ '
 alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/'
 alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
-alias routine2pc='rsync -avhPz --update /mnt/KSS/ pc:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude "btrfssnapshots" '
-alias routine2lap='rsync -avhPz --update /mnt/KSS/ lap:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude "btrfssnapshots" '
+alias routine2pc='rsync -avhPz --update /mnt/KSS/ pc:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" '
+alias routine2lap='rsync -avhPz --update /mnt/KSS/ lap:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" '
 alias spm2pn='rsync -avhPz --update spiderman.jpg phone:/storage/F563-C19B/SPM/'
 alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/mnt/KSS/Studies/SPM/'
 alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/mnt/KSS/Studies/SPM/'
