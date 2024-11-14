@@ -54,7 +54,7 @@ setopt appendhistory
 
 
 #setting alias for faster workflow
-alias pushsongs='rsync -avhPz --update /mnt/KSS/Media/Songs/ pc:/mnt/KSS/Media/Songs/ pn:/storage/F563-C19B/Songs/ '
+alias pushsongs='rsync -avhPz --update /mnt/KSS/Media/Songs/ pc:/mnt/KSS/Media/Songs/ & rsync -avhpz --update /mnt/KSS/Media/Songs/ phone:/storage/F563-C19B/Songs/ '
 
 alias snapstudies='sudo btrfs subvolume snapshot /mnt/KSS/Studies /mnt/KSS/.btrfssnapshots/Studies_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapdocs='sudo btrfs subvolume snapshot /mnt/KSS/Documents /mnt/KSS/.btrfssnapshots/Documents_snapshot_$(date +"%Y%m%d_%H%M%S") '
