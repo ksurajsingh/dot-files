@@ -54,22 +54,34 @@ setopt appendhistory
 
 
 #setting alias for faster workflow
+
+#update songs
 alias pushsongs='rsync -avhPz --update /mnt/KSS/Media/Songs/ pc:/mnt/KSS/Media/Songs/ & rsync -avhpz --update /mnt/KSS/Media/Songs/ phone:/storage/F563-C19B/Songs/ '
 
+#snapshots
 alias snapstudies='sudo btrfs subvolume snapshot /mnt/KSS/Studies /mnt/KSS/.btrfssnapshots/Studies_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapdocs='sudo btrfs subvolume snapshot /mnt/KSS/Documents /mnt/KSS/.btrfssnapshots/Documents_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/Back_Ups /mnt/KSS/.btrfssnapshots/Back_Ups_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssnapshots/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapall='snapmedia & snapdocs & snapstudies & snapbackups'
+
+#photos and screenshots backups
 alias dcim2backups='rsync -avhpz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/KSS/Back_Ups/POCO/DCIM/Camera/'
 alias ss2backups='mv ~/Pictures/Screenshots/* /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ '
 alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/'
 alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
+
+
+#KSS backups
 alias routine2pc='rsync -avhPz --update /mnt/KSS/ pc:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" '
 alias routine2lap='rsync -avhPz --update /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" '
+
+#SPM update
 alias spm2pn='rsync -avhPz --update spiderman.jpg phone:/storage/F563-C19B/SPM/'
 alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/mnt/KSS/Studies/SPM/'
 alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/mnt/KSS/Studies/SPM/'
+
+#commoners
 alias sdd='cd /mnt/KSS/Studies/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
 alias todo='nvim /mnt/KSS/Studies/todo/todo'
@@ -103,7 +115,6 @@ alias ran='ranger'
 alias calc='deepin-calculator'
 alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu'
 alias ttw='rsync -achPz --update /mnt/KSS/Media/towatch/* phone:/storage/E0BE-1F10/towatch/'
-alias ttl='rsync -avhPz --update /mnt/kSS/Media/tolisten/* phone:/storage/E0BE-1F10/tolisten'
 alias tdu='cd /mnt/KSS/Studies/todo/ && ac && git push -f todo main'
 alias tdd='cd /mnt/KSS/Studies/todo/ && git pull todo main'
 alias cod='nvim /mnt/KSS/Studies/SPM/codes'
