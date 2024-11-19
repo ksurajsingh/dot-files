@@ -55,8 +55,6 @@ setopt appendhistory
 
 #setting alias for faster workflow
 
-#update songs
-alias pushsongs='rsync -avhPz --update /mnt/KSS/Media/Songs/ pc:/mnt/KSS/Media/Songs/ & rsync -avhpz --update /mnt/KSS/Media/Songs/ phone:/storage/F563-C19B/Songs/ '
 
 #snapshots
 alias snapstudies='sudo btrfs subvolume snapshot /mnt/KSS/Studies /mnt/KSS/.btrfssnapshots/Studies_snapshot_$(date +"%Y%m%d_%H%M%S") '
@@ -65,16 +63,22 @@ alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/Back_Ups /mnt/KSS/.btr
 alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssnapshots/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapall='snapmedia & snapdocs & snapstudies & snapbackups'
 
-#photos and screenshots backups
-alias dcim2backups='rsync -avhpz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/KSS/Back_Ups/POCO/DCIM/Camera/'
-alias ss2backups='mv ~/Pictures/Screenshots/* /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ '
-alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/'
-alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
-
+#routinepnbackups
+alias routinepn2here='dcim2backups & pnss2backups'
+alias routine2pn='ss2pn & pushsongs2pn & spm2pn'
 
 #KSS backups
-alias routine2pc='rsync -avhPz --update /mnt/KSS/ pc:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" '
-alias routine2lap='rsync -avhPz --update /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" '
+alias routine2pc='rsync -avhPz --update /mnt/KSS/ pc:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" & spm2lap'
+alias routine2lap='rsync -avhPz --update /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" spm2pc'
+
+
+#photos and screenshots backups
+alias dcim2backups='rsync -avhpz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/KSS/Back_Ups/POCO/DCIM/Camera/'
+alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/'
+alias ss2backups='mv ~/Pictures/Screenshots/* /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ '
+alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
+alias pushsongs2pn='rsync -avhpz --update /mnt/KSS/Media/Songs/ phone:/storage/F563-C19B/Songs/ '
+
 
 #SPM update
 alias spm2pn='rsync -avhPz --update spiderman.jpg phone:/storage/F563-C19B/SPM/'
