@@ -86,6 +86,7 @@ alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/mnt/KSS/Studies/SPM/'
 alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/mnt/KSS/Studies/SPM/'
 
 #commoners
+alias chrome=google-chrome-stable
 alias sdd='cd /mnt/KSS/Studies/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
 alias todo='nvim /mnt/KSS/Studies/todo/todo'
