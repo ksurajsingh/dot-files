@@ -63,13 +63,19 @@ alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/Back_Ups /mnt/KSS/.btr
 alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssnapshots/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapall='snapmedia & snapdocs & snapstudies & snapbackups'
 
+#peforming backups among devices
+alias backupfrompc='routinepn2here && routine2pn && routine2lap'
+alias backupfromlap='routinepn2here && routine2pn && routine2pc'
+
 #routinepnbackups
-alias routinepn2here='dcim2backups & pnss2backups'
-alias routine2pn='ss2pn & pushsongs2pn & spm2pn'
+alias routinepn2here='dcim2backups && pnss2backups'
+alias routine2pn='ss2backups && ss2pn && pushsongs2pn'
 
 #KSS backups
-alias routine2pc='rsync -avhPz --update /mnt/KSS/ pc:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" & spm2lap'
-alias routine2lap='rsync -avhPz --update /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" spm2pc'
+alias routine2pc='rsync -avhPz --update /mnt/KSS/ pc:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "/mnt/KSS/Studies/SPM/codes" '
+alias routinefrompc='rsync -avhPz --update pc:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "/mnt/KSS/Studies/SPM/codes" '
+alias routine2lap='rsync -avhPz --update /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "/mnt/KSS/Studies/SPM/codes" '
+alias routinefromlap='rsync -avhPz --update laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "/mnt/KSS/Studies/SPM/codes" '
 
 
 #photos and screenshots backups
