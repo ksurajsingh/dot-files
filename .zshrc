@@ -65,7 +65,6 @@ alias snapall='snapmedia & snapdocs & snapstudies & snapbackups'
 
 #peforming backups among devices
 alias backupfrompc='routinepn2here && routine2pn && routine2lap'
-alias backupfromlap='routinepn2here && routine2pn && routine2pc'
 
 #routinepnbackups
 alias routinepn2here='dcim2backups && pnss2backups'
