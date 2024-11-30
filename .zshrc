@@ -65,7 +65,7 @@ alias snapall='snapmedia && snapdocs && snapstudies && snapbackups'
 
 #Friday
 alias friday='phoneup && kssup && snapall && phoneup'
-
+alias lifeupdate='phoneup && kssup && phoneup'
 
 #KSS updates
 alias kssup='pc2lap && lap2pc'
