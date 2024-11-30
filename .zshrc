@@ -69,20 +69,20 @@ alias friday='phoneup && kssup && snapall && phoneup'
 
 #KSS updates
 alias kssup='pc2lap && lap2pc'
-alias pc2lap='rsync -avhPz --update /mnt/KSS/ lap:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
-alias lap2pc='rsync -avhPz --update lap:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
+alias pc2lap='rsync -avhPz --update /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
+alias lap2pc='rsync -avhPz --update laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
 
 #Phoneupdates
-alias phoneup='dcim2pc && pnss2backups && ss2pn && pnsem2pc && sem2pn && pnsongs2pc && songs2pn && pndocs2pc && docs2pn'
+alias phoneup='dcim2pc && pnss2backups && ss2pn && pnsem2pc && sem2pn && pndocs2pc && docs2pn'
 alias dcim2pc='rsync -avhPz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/camera/ '
 alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
 alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
 alias pnsem2pc='rsync -avhPz --update phone:/storage/F563-C19B/5thsem/ /mnt/KSS/Studies/rvce/5thsem/ '
 alias sem2pn='rsync -avhPz --update /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/F563-C19B/5thsem/ --exclude "*git*" --exclude "myenv" '
-alias pnsongs2pc='rsync -avhPz --update phone:/storage/F563-C19B/songs/ /mnt/KSS/Media/songs/ '
-alias songs2pn='rsync -avhpz --update /mnt/KSS/Media/songs/ phone:/storage/F563-C19B/songs/ '
-alias pndocs2pc='rsync -avhPz --update phone:/storage/F563-C19B/documents/ /mnt/KSS/Documents/ '
-alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C19B/documents/ --exclude "*git*" --exclude "myenv" --exclude --exclude "*.zip"' 
+alias pnsongs2pc='rsync -avhPz --update phone:/storage/F563-C19B/songs /mnt/KSS/Media/ '
+alias songs2pn='rsync -avhpz --update /mnt/KSS/Media/songs phone:/storage/F563-C19B/ '
+alias pndocs2pc='rsync -avhPz --update phone:/storage/F563-C19B/Documents/ /mnt/KSS/Documents/ '
+alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C19B/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
 
 
 #SPM update
