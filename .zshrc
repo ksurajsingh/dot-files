@@ -73,7 +73,7 @@ alias pc2lap='rsync -avhPz --update /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*"
 alias lap2pc='rsync -avhPz --update laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
 
 #Phoneupdates
-alias phoneup='dcim2pc && pnss2backups && ss2pn && pnsem2pc && sem2pn && pndocs2pc && docs2pn'
+alias phoneup='dcim2pc && pnss2backups && ss2pn && pnsem2pc && sem2pn && pnsongs2pc && songs2pn && pndocs2pc && docs2pn'
 alias dcim2pc='rsync -avhPz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/camera/ '
 alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
 alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
