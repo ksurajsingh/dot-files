@@ -78,11 +78,11 @@ alias dcim2pc='rsync -avhPz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/
 alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
 alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
 alias pnsem2pc='rsync -avhPz --update phone:/storage/F563-C19B/5thsem/ /mnt/KSS/Studies/rvce/5thsem/ '
-alias sem2pn='rsync -avhPz --update /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/F563-C19B/5thsem/ '
+alias sem2pn='rsync -avhPz --update /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/F563-C19B/5thsem/ --exclude "*git*" --exclude "myenv" '
 alias pnsongs2pc='rsync -avhPz --update phone:/storage/F563-C19B/songs/ /mnt/KSS/Media/songs/ '
 alias songs2pn='rsync -avhpz --update /mnt/KSS/Media/songs/ phone:/storage/F563-C19B/songs/ '
 alias pndocs2pc='rsync -avhPz --update phone:/storage/F563-C19B/documents/ /mnt/KSS/Documents/ '
-alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C19B/documents/ --exclude "E" ' 
+alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C19B/documents/ --exclude "subjects" --exclude "*git*" --exclude "myenv"' 
 
 
 #SPM update
