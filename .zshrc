@@ -64,7 +64,7 @@ alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssna
 alias snapall='snapmedia & snapdocs & snapstudies & snapbackups'
 
 #Friday
-alias friday='snapall && phoneup && kssup'
+alias friday='phoneup && kssup && snapall && phoneup'
 
 
 #KSS updates
