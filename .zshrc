@@ -82,7 +82,7 @@ alias sem2pn='rsync -avhPz --update /mnt/KSS/Studies/rvce/5thsem/ phone:/storage
 alias pnsongs2pc='rsync -avhPz --update phone:/storage/F563-C19B/songs/ /mnt/KSS/Media/songs/ '
 alias songs2pn='rsync -avhpz --update /mnt/KSS/Media/songs/ phone:/storage/F563-C19B/songs/ '
 alias pndocs2pc='rsync -avhPz --update phone:/storage/F563-C19B/documents/ /mnt/KSS/Documents/ '
-alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C19B/documents/ --exclude "subjects" --exclude "*git*" --exclude "myenv"' 
+alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C19B/documents/ --exclude "*git*" --exclude "myenv" --exclude --exclude "*.zip"' 
 
 
 #SPM update
