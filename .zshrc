@@ -61,7 +61,7 @@ alias snapstudies='sudo btrfs subvolume snapshot /mnt/KSS/Studies /mnt/KSS/.btrf
 alias snapdocs='sudo btrfs subvolume snapshot /mnt/KSS/Documents /mnt/KSS/.btrfssnapshots/Documents_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/Back_Ups /mnt/KSS/.btrfssnapshots/Back_Ups_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssnapshots/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
-alias snapall='snapmedia & snapdocs & snapstudies & snapbackups'
+alias snapall='snapmedia && snapdocs && snapstudies && snapbackups'
 
 #Friday
 alias friday='phoneup && kssup && snapall && phoneup'
