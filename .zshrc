@@ -63,31 +63,30 @@ alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/Back_Ups /mnt/KSS/.btr
 alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssnapshots/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapall='snapmedia & snapdocs & snapstudies & snapbackups'
 
-#peforming backups among devices
-alias backupfrompc='routinepn2here && routine2pn && routine2lap'
-alias backupfromlap='routinepn2here && routine2pn && routine2pc'
-
-#routinepnbackups
-alias routinepn2here='dcim2backups && pnss2backups'
-alias routine2pn='ss2backups && ss2pn && pushsongs2pn'
-
-#KSS backups
-alias routine2pc='rsync -avhPz --update /mnt/KSS/ pc:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
-alias routinefrompc='rsync -avhPz --update pc:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
-alias routine2lap='rsync -avhPz --update /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
-alias routinefromlap='rsync -avhPz --update laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
+#Friday
+alias friday='snapall && phoneup && kssup'
 
 
-#photos and screenshots backups
-alias dcim2backups='rsync -avhpz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/KSS/Back_Ups/POCO/DCIM/Camera/'
-alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/'
-alias ss2backups='mv ~/Pictures/Screenshots/* /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ '
-alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/POCO/DCIM/Screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
-alias pushsongs2pn='rsync -avhpz --update /mnt/KSS/Media/Songs/ phone:/storage/F563-C19B/Songs/ '
+#KSS updates
+alias kssup='pc2lap && lap2pc'
+alias pc2lap='rsync -avhPz --update /mnt/KSS/ lap:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
+alias lap2pc='rsync -avhPz --update lap:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
+
+#Phoneupdates
+alias phoneup='dcim2pc && pnss2backups && ss2pn && pnsem2pc && sem2pn && pnsongs2pc && songs2pn && pndocs2pc && docs2pn'
+alias dcim2pc='rsync -avhPz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/Camera/ '
+alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
+alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/screenshots/ '
+alias pnsem2pc='rsync -avhPz --update phone:/storage/F563-C19B/5thsem/ /mnt/KSS/Studies/RVCE/5thsem/ '
+alias sem2pn='rsync -avhPz --update /mnt/KSS/Studies/RVCE/5thsem/ phone:/storage/F563-C19B/5thsem/ '
+alias pnsongs2pc='rsync -avhPz --update phone:/storage/F563-C19B/songs/ /mnt/KSS/Media/songs/ '
+alias songs2pn='rsync -avhpz --update /mnt/KSS/Media/songs/ phone:/storage/F563-C19B/songs/ '
+alias pndocs2pc='rsync -avhPz --update phone:/storage/F563-C19B/documents/ /mnt/KSS/Documents/ '
+alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C19B/documents/ --exclude "E" ' 
 
 
 #SPM update
-alias spm2pn='rsync -avhPz --update spiderman.jpg phone:/storage/F563-C19B/SPM/'
+alias spm2pn='rsync -avhPz --update /mnt/KSS/Studies/SPM/spiderman.jpg phone:/storage/F563-C19B/SPM/'
 alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/mnt/KSS/Studies/SPM/'
 alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/mnt/KSS/Studies/SPM/'
 
