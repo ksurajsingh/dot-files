@@ -85,10 +85,10 @@ alias pndocs2pc='rsync -avhPz --update phone:/storage/F563-C19B/Documents/ /mnt/
 alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C19B/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
 
 
-#SPM update
-alias spm2pn='rsync -avhPz --update /mnt/KSS/Studies/SPM/spiderman.jpg phone:/storage/F563-C19B/SPM/'
-alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/mnt/KSS/Studies/SPM/'
-alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/mnt/KSS/Studies/SPM/'
+#.spm update
+alias spm2pn='rsync -avhPz --update /mnt/KSS/Studies/.spm/spiderman.jpg phone:/storage/F563-C19B/.spm/'
+alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/mnt/KSS/Studies/.spm/'
+alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/mnt/KSS/Studies/.spm/'
 
 #commoners
 alias chrome=google-chrome-stable
@@ -96,7 +96,7 @@ alias sdd='cd /mnt/KSS/Studies/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
 alias todo='nvim /mnt/KSS/Studies/todo/todo'
 alias todod='cd /mnt/KSS/Studies/todo/'
-alias spm='cd /mnt/KSS/Studies/SPM/'
+alias spm='cd /mnt/KSS/Studies/.spm/'
 alias rvce='cd /mnt/KSS/Studies/rvce/'
 alias sem='cd /mnt/KSS/Studies/rvce/5thsem'
 alias backups='cd /mnt/KSS/Back_Ups'
@@ -125,7 +125,7 @@ alias ran='ranger'
 alias calc='deepin-calculator'
 alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu'
 alias ttw='rsync -achPz --update /mnt/KSS/Media/towatch/* phone:/storage/E0BE-1F10/towatch/'
-alias cod='nvim /mnt/KSS/Studies/SPM/codes'
+alias cod='nvim /mnt/KSS/Studies/.spm/.codes'
 alias ref='sudo reflector --country 'India' --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias ubuntuup='sudo apt update && sudo apt upgrade && sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove && sudo apt autoclean && sudo apt clean'
 alias lkey='gpg --list-keys --keyid-format long'
