@@ -80,7 +80,7 @@ alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phon
 alias pnsem2pc='rsync -avhPz --update phone:/storage/F563-C19B/5thsem/ /mnt/KSS/Studies/rvce/5thsem/ '
 alias sem2pn='rsync -avhPz --update /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/F563-C19B/5thsem/ --exclude "*git*" --exclude "myenv" '
 alias pnsongs2pc='rsync -ahPz --update phone:/storage/F563-C19B/songs /mnt/KSS/Media/ '
-alias songs2pn='rsync -ahpz --update /mnt/KSS/Media/songs phone:/storage/F563-C19B/ '
+alias songs2pn='rsync -ahPz --update /mnt/KSS/Media/songs phone:/storage/F563-C19B/ '
 alias pndocs2pc='rsync -avhPz --update phone:/storage/F563-C19B/Documents/ /mnt/KSS/Documents/ '
 alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C19B/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
 
