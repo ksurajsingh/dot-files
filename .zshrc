@@ -86,9 +86,9 @@ alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C1
 
 
 #.spm update
-alias spm2pn='rsync -avhPz --update /mnt/KSS/Studies/.spm/spiderman.jpg phone:/storage/F563-C19B/.spm/'
-alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/mnt/KSS/Studies/.spm/'
-alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/mnt/KSS/Studies/.spm/'
+alias spm2pn='rsync -avhPz --update /home/suraj/.spm/spiderman.jpg phone:~/.spm/'
+alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/home/suraj/.spm/'
+alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/home/suraj/.spm/'
 
 #commoners
 alias chrome=google-chrome-stable
@@ -96,7 +96,7 @@ alias sdd='cd /mnt/KSS/Studies/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
 alias todo='nvim /mnt/KSS/Studies/todo/todo'
 alias todod='cd /mnt/KSS/Studies/todo/'
-alias spm='cd /mnt/KSS/Studies/.spm/'
+alias spm='cd /home/suraj/.spm/'
 alias rvce='cd /mnt/KSS/Studies/rvce/'
 alias sem='cd /mnt/KSS/Studies/rvce/5thsem'
 alias backups='cd /mnt/KSS/Back_Ups'
@@ -125,7 +125,7 @@ alias ran='ranger'
 alias calc='deepin-calculator'
 alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu && yay -Syu'
 alias ttw='rsync -achPz --update /mnt/KSS/Media/towatch/* phone:/storage/E0BE-1F10/towatch/'
-alias cod='nvim /mnt/KSS/Studies/.spm/.codes'
+alias cod='nvim /home/suraj/.spm/.codes'
 alias ref='sudo reflector --country 'India' --latest 5 --sort rate --save /etc/pacman.d/mirrorlist && pacman -Syy'
 alias ubuntuup='sudo apt update && sudo apt upgrade && sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove && sudo apt autoclean && sudo apt clean'
 alias lkey='gpg --list-keys --keyid-format long'
