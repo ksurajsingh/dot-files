@@ -91,7 +91,8 @@ alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/home/suraj/.spm/'
 alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/home/suraj/.spm/'
 
 #commoners
-alias videos='cd /mnt/KSS/Studies/rvce/5th/private/videos/'
+alias videos='cd /mnt/KSS/Studies/rvce/5thsem/private/videos/'
+alias el='cd /mnt/KSS/Studies/rvce/5thsem/private/el/'
 alias textstack='cd /mnt/KSS/Studies/text-stack/'
 alias dsa='cd /mnt/KSS/Studies/dsa/'
 alias chrome=google-chrome-stable
