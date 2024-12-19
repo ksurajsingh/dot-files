@@ -74,15 +74,15 @@ alias lap2pc='rsync -ahPz --update laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" 
 
 #Phoneupdates
 alias phoneup='dcim2pc && pnss2backups && ss2pn && pnsem2pc && sem2pn && pndocs2pc && docs2pn'
-alias dcim2pc='rsync -avhPz --update phone:/storage/F563-C19B/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/camera/ '
+alias dcim2pc='rsync -avhPz --update phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/camera/ '
 alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
 alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
-alias pnsem2pc='rsync -avhPz --update phone:/storage/F563-C19B/5thsem/ /mnt/KSS/Studies/rvce/5thsem/ '
-alias sem2pn='rsync -avhPz --update /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/F563-C19B/5thsem/ --exclude "*git*" --exclude "myenv" --exclude "private" '
-alias pnsongs2pc='rsync -ahPz --update phone:/storage/F563-C19B/songs /mnt/KSS/Media/ '
-alias songs2pn='rsync -ahPz --update /mnt/KSS/Media/songs phone:/storage/F563-C19B/ '
-alias pndocs2pc='rsync -avhPz --update phone:/storage/F563-C19B/Documents/ /mnt/KSS/Documents/ '
-alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/F563-C19B/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
+alias pnsem2pc='rsync -avhPz --update phone:/storage/E452-4B2F/5thsem/ /mnt/KSS/Studies/rvce/5thsem/ '
+alias sem2pn='rsync -avhPz --update /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/E452-4B2F/5thsem/ --exclude "*git*" --exclude "myenv" --exclude "private" '
+alias pnsongs2pc='rsync -ahPz --update phone:/storage/E452-4B2F/songs /mnt/KSS/Media/ '
+alias songs2pn='rsync -ahPz --update /mnt/KSS/Media/songs phone:/storage/E452-4B2F/ '
+alias pndocs2pc='rsync -avhPz --update phone:/storage/E452-4B2F/Documents/ /mnt/KSS/Documents/ '
+alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/E452-4B2F/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
 
 
 #.spm update
