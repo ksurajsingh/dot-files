@@ -93,6 +93,7 @@ alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/home/suraj/.spm/'
 #commoners
 alias videos='cd /mnt/KSS/Studies/rvce/5th/private/videos/'
 alias textstack='cd /mnt/KSS/Studies/text-stack/'
+alias dsa='cd /mnt/KSS/Studies/dsa/'
 alias chrome=google-chrome-stable
 alias sdd='cd /mnt/KSS/Studies/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
