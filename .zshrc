@@ -90,10 +90,14 @@ alias spm2pn='rsync -avhPz --update /home/suraj/.spm/spiderman.jpg phone:~/.spm/
 alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/home/suraj/.spm/'
 alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/home/suraj/.spm/'
 
+#sem/private/el/dbms to lab/dbms/ 
+
+
 #commoners
 alias fzf='fzf --multi'
 alias videos='cd /mnt/KSS/Studies/rvce/5thsem/private/videos/'
 alias el='cd /mnt/KSS/Studies/rvce/5thsem/private/el/'
+alias lab='cd /mnt/KSS/Studies/rvce/5thsem/private/lab/'
 alias textstack='cd /mnt/KSS/Studies/text-stack/'
 alias dsa='cd /mnt/KSS/Studies/dsa/'
 alias chrome=google-chrome-stable
