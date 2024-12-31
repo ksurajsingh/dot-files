@@ -68,33 +68,33 @@ alias lifeupdate='phoneup && kssup && phoneup'
 
 #KSS updates
 alias kssup='pc2lap && lap2pc'
-alias pc2lap='rsync -ahPz --update /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
-alias lap2pc='rsync -ahPz --update laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
+alias pc2lap='rsync -avUhPz --delete /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
+alias lap2pc='rsync -avhUPz laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
 
 #Phoneupdates
-alias phoneup='dcim2pc && pnss2backups && ss2pn && pnsem2pc && sem2pn && pndocs2pc && docs2pn'
-alias dcim2pc='rsync -avhPz --update phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/camera/ '
-alias pnss2backups='rsync -avhPz --update phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
-alias ss2pn='rsync -avhPz --update /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
-alias pnsem2pc='rsync -avhPz --update phone:/storage/E452-4B2F/5thsem/ /mnt/KSS/Studies/rvce/5thsem/ '
+alias phoneup='dcim2pc && pnss2backups && ss2pn && pnsem2pc && sem2pn && pndocs2pc && docs2pn '
+alias dcim2pc='rsync -avhUPz phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/camera/ '
+alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
+alias ss2pn='rsync -avhUPz /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
+alias pnsem2pc='rsync -avhUPz  phone:/storage/E452-4B2F/5thsem/ /mnt/KSS/Studies/rvce/5thsem/ '
 alias sem2pn='rsync -avhPz --update /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/E452-4B2F/5thsem/ --exclude "*git*" --exclude "myenv" --exclude "private" '
-alias pnsongs2pc='rsync -ahPz --update phone:/storage/E452-4B2F/songs /mnt/KSS/Media/ '
-alias songs2pn='rsync -ahPz --update /mnt/KSS/Media/songs phone:/storage/E452-4B2F/ '
-alias pndocs2pc='rsync -avhPz --update phone:/storage/E452-4B2F/Documents/ /mnt/KSS/Documents/ '
-alias docs2pn='rsync -avhPz --update /mnt/KSS/Documents/  phone:/storage/E452-4B2F/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
-
+alias pnsongs2pc='rsync -ahUPz phone:/storage/E452-4B2F/songs /mnt/KSS/Media/ '
+alias songs2pn='rsync -ahUPz /mnt/KSS/Media/songs phone:/storage/E452-4B2F/ '
+alias pndocs2pc='rsync -avhUPz  phone:/storage/E452-4B2F/Documents/ /mnt/KSS/Documents/ '
+alias docs2pn='rsync -avhUPz /mnt/KSS/Documents/  phone:/storage/E452-4B2F/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
+alias tw2pn='rsync -avhUPz /mnt/KSS/Media/towatch/* phone:/storage/E452-4B2F/towatch/'
+alias pntw2pc='rsync -avhUPz phone:/storage/E452-4B2F/towatch/  /mnt/KSS/Media/towatch/ '
 
 #.spm update
-alias spm2pn='rsync -avhPz --update /home/suraj/.spm/spiderman.jpg phone:~/.spm/'
-alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/home/suraj/.spm/'
-alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/home/suraj/.spm/'
+alias spm2pn='rsync -avhUPz  /home/suraj/.spm/spiderman.jpg phone:~/.spm/'
+alias spm2lap='rsync -avhUPz  spiderman.jpg laptop:/home/suraj/.spm/'
+alias spm2pc='rsync -avhUPz  spiderman.jpg pc:/home/suraj/.spm/'
 
 #sem/private/el/dbms to lab/dbms/ 
 
 
 #commoners
 alias fzf='fzf --multi'
-alias videos='cd /mnt/KSS/Studies/rvce/5thsem/private/videos/'
 alias el='cd /mnt/KSS/Studies/rvce/5thsem/private/el/'
 alias lab='cd /mnt/KSS/Studies/rvce/5thsem/private/lab/'
 alias textstack='cd /mnt/KSS/Studies/text-stack/'
@@ -134,10 +134,8 @@ alias zshup='cp ~/.zshrc ~/dot-files/.zshrc'
 alias ran='ranger'
 alias calc='deepin-calculator'
 alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu && yay -Syu'
-alias ttw='rsync -achPz --update /mnt/KSS/Media/towatch/* phone:/storage/E0BE-1F10/towatch/'
 alias cod='nvim /home/suraj/.spm/.codes'
 alias ref='sudo reflector --country 'India' --latest 5 --sort rate --save /etc/pacman.d/mirrorlist && pacman -Syy'
-alias ubuntuup='sudo apt update && sudo apt upgrade && sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove && sudo apt autoclean && sudo apt clean'
 alias lkey='gpg --list-keys --keyid-format long'
 alias lskey='gpg --list-secret-keys --keyid-format long'
 alias de='bash de'
@@ -164,3 +162,6 @@ alias ll="ls -al --color=never"
 alias pnl='pkill newlook'
 alias nv=nvim
 alias gift='cd ~/gift && ./takegift' 
+
+# Created by `pipx` on 2024-12-29 05:42:19
+export PATH="$PATH:/home/suraj/.local/bin"
