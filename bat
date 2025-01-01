@@ -19,7 +19,7 @@ getloc(){
 numbers=("9985369781" "7996070950" )
 
 while true; do
-  echo -e "\n running . . . . \n" 
+  echo -e "\n Running . . . . \n" 
   getbatstat
   # when less than 10 %
   while  [ "$bat" -lt 10  ]; do
@@ -62,6 +62,6 @@ while true; do
   echo -e "* * * more than 10% * * *"
   # wait for 5 minutes before checking if battery has discharged below 10 
   sleep 300
-  echo -e "\n\n Running . . . \n\n"
+  echo -e "\n\n . . . \n\n"
 
 done
