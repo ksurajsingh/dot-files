@@ -128,6 +128,7 @@ function postcmd(){
 precmd_functions+=(postcmd)
 
 alias zshup='rsync -avhPz --update ~/.zshrc ~/dot-files/'
+alias zshdown='rsync -avhPz --update ~/dot-files/ ~/.zshrc'
 alias dotpush='cd ~/dot-files/ && gph'
 alias sdc='cd /storage/E452-4B2F/ '
 alias pushsongs2pc='rsync -avhPz --update /storage/E452-4B2F/Songs/ pc:/mnt/KSS/Media/Songs/ '
@@ -138,7 +139,7 @@ alias intstr='cd /storage/emulated/0/'
 alias playsongs='mpv /storage/E452-4B2F/songs/ --shuffle'
 alias songs='cd /storage/E452-4B2F/songs/'
 alias todo='nvim ~/todo/todo'
-alias todod='cd ~/todo'
+alias todod='cd ~/sdc/todo'
 alias spm='cd ~/.spm/'
 alias de='bash de'
 alias docs='cd /storage/E452-4B2F/Documents/ '
