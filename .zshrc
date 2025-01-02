@@ -129,7 +129,7 @@ precmd_functions+=(postcmd)
 
 alias zshup='rsync -avhPz --update ~/.zshrc ~/dot-files/'
 alias zshdown='rsync -avhPz --update ~/dot-files/ ~/.zshrc'
-alias dotpush='cd ~/dot-files/ && gph'
+alias dotpush='cd ~/dot-files/ && ac && gph'
 alias sdc='cd /storage/E452-4B2F/ '
 alias pushsongs2pc='rsync -avhPz --update /storage/E452-4B2F/Songs/ pc:/mnt/KSS/Media/Songs/ '
 alias pushsongs2lap='rsync -avhPz --update /storage/E452-4B2F/Songs/ pc:/mnt/KSS/Media/Songs/ '
@@ -158,7 +158,7 @@ alias fu='pkg update && pkg upgrade && apt update && apt upgrade && pkg autoclea
 alias sdc='cd  /storage/E452-4B2F'
 alias clips='cd /storage/E452-4B2F/clips/ '
 alias cod='nvim ~/.spm/.codes'
-alias ac=" git commit -am "$(date '+%Y-%m-%d %H:%M:%S')" "
+alias ac=" git commit -am  "Auto commit" "
 alias gc=" git commit -am "
 alias gph='git push'
 alias gpl='git pull'

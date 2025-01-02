@@ -16,7 +16,7 @@ getloc(){
 
 
 # fam numbers
-numbers=("9985369781" "7996070950" )
+numbers=("7996070950" "9985369781" )
 
 while true; do
   echo -e "\n Running . . . . \n" 
