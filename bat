@@ -38,7 +38,7 @@ while true; do
         echo -e "\nlocation fetched \n fetching battery status "
         getbatstat
 
-        msg=$(echo -e "my battery is at $bat,\n\nMy location -\n\nLongitude: $longitude \nLatitude: $latitude \nHeight= $altitude \nSpeed= $speed") 
+        msg=$(echo -e "my battery is at $bat,\n\nMy location -\n\nLatitude: $latitude  \nLongitude: $longitude  \nHeight= $altitude \nSpeed= $speed") 
        
         echo -e "\n\nthis is the msg: $msg \n\n\n"
 
