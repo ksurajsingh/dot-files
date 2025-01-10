@@ -94,12 +94,12 @@ alias spm2pc='rsync -avhUPz  spiderman.jpg pc:/home/suraj/.spm/'
 
 
 #commoners
+alias site='cd /mnt/KSS/Studies/site/ '
 alias tdu='rsync -avhUPz /mnt/KSS/Studies/todo/ phone:~/sdc/todo/ '
 alias tdd='rsync -avhUPz phone:~/sdc/todo/ /mnt/KSS/Studies/todo/ '
 alias fzf='fzf --multi'
 alias el='cd /mnt/KSS/Studies/rvce/5thsem/private/el/'
 alias lab='cd /mnt/KSS/Studies/rvce/5thsem/private/lab/'
-alias textstack='cd /mnt/KSS/Studies/text-stack/'
 alias dsa='cd /mnt/KSS/Studies/dsa/'
 alias chrome=google-chrome-stable
 alias sdd='cd /mnt/KSS/Studies/ '
