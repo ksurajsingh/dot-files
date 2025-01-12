@@ -55,6 +55,7 @@ setopt appendhistory
 #setting alias for faster workflow
 
 
+
 #snapshots
 alias snapstudies='sudo btrfs subvolume snapshot /mnt/KSS/Studies /mnt/KSS/.btrfssnapshots/Studies_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapdocs='sudo btrfs subvolume snapshot /mnt/KSS/Documents /mnt/KSS/.btrfssnapshots/Documents_snapshot_$(date +"%Y%m%d_%H%M%S") '
@@ -63,8 +64,8 @@ alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssna
 alias snapall='snapmedia && snapdocs && snapstudies && snapbackups'
 
 #Friday
-alias friday='phoneup && kssup && snapall && phoneup'
-alias lifeupdate='phoneup && kssup && phoneup'
+alias friday='phoneup && notify-send phoneup1 && kssup && notify-send KSSUP give password && snapall && notify-send KSS-snapped && phoneup && notify-send Friday done'
+alias lifeupdate='phoneup && notify-send phoneup && kssup && notify-send KSSUP && phoneup && notify-send life updated'
 
 #KSS updates
 alias kssup='pc2lap && lap2pc'
@@ -76,7 +77,7 @@ alias phoneup='dcim2pc && pnss2backups && ss2pn && sem2pn && pndocs2pc && docs2p
 alias dcim2pc='rsync -avhUPz phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/camera/ '
 alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
 alias ss2pn='rsync -avhUPz /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
-alias sem2pn='rsync -avhUPz --delete /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/E452-4B2F/5thsem/ --exclude "*git*" --exclude "myenv" " ' 
+alias sem2pn='rsync -avhUPz --delete /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/E452-4B2F/5thsem/ --exclude "*git*" --exclude "myenv" ' 
 alias pndocs2pc='rsync -avhUPz  phone:/storage/E452-4B2F/Documents/ /mnt/KSS/Documents/ '
 alias docs2pn='rsync -avhUPz /mnt/KSS/Documents/  phone:/storage/E452-4B2F/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
 
