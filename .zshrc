@@ -72,18 +72,20 @@ alias pc2lap='rsync -avUhPz --delete /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*
 alias lap2pc='rsync -avhUPz laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
 
 #Phoneupdates
-alias phoneup='dcim2pc && pnss2backups && ss2pn && pnsem2pc && sem2pn && pndocs2pc && docs2pn '
+alias phoneup='dcim2pc && pnss2backups && ss2pn && sem2pn && pndocs2pc && docs2pn '
 alias dcim2pc='rsync -avhUPz phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/camera/ '
 alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
 alias ss2pn='rsync -avhUPz /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
-alias pnsem2pc='rsync -avhUPz  phone:/storage/E452-4B2F/5thsem/ /mnt/KSS/Studies/rvce/5thsem/ '
-alias sem2pn='rsync -avhUPz --delete /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/E452-4B2F/5thsem/ --exclude "*git*" --exclude "myenv" --exclude "private" '
-alias pnsongs2pc='rsync -ahUPz phone:/storage/E452-4B2F/songs /mnt/KSS/Media/ '
-alias songs2pn='rsync -ahUPz /mnt/KSS/Media/songs phone:/storage/E452-4B2F/ '
+alias sem2pn='rsync -avhUPz --delete /mnt/KSS/Studies/rvce/5thsem/ phone:/storage/E452-4B2F/5thsem/ --exclude "*git*" --exclude "myenv" " ' 
 alias pndocs2pc='rsync -avhUPz  phone:/storage/E452-4B2F/Documents/ /mnt/KSS/Documents/ '
 alias docs2pn='rsync -avhUPz /mnt/KSS/Documents/  phone:/storage/E452-4B2F/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
+
+alias songs2pn='rsync -ahUPz /mnt/KSS/Media/songs phone:/storage/E452-4B2F/ '
+alias pnsongs2pc='rsync -ahUPz phone:/storage/E452-4B2F/songs /mnt/KSS/Media/ '
+alias pnsem2pc='rsync -avhUPz  phone:/storage/E452-4B2F/5thsem/ /mnt/KSS/Studies/rvce/5thsem/ '
 alias tw2pn='rsync -avhUPz /mnt/KSS/Media/towatch/* phone:/storage/E452-4B2F/towatch/'
 alias pntw2pc='rsync -avhUPz phone:/storage/E452-4B2F/towatch/  /mnt/KSS/Media/towatch/ '
+
 
 #.spm update
 alias spm2pn='rsync -avhUPz  /home/suraj/.spm/spiderman.jpg phone:~/.spm/'
@@ -94,6 +96,11 @@ alias spm2pc='rsync -avhUPz  spiderman.jpg pc:/home/suraj/.spm/'
 
 
 #commoners
+alias yt='cd ~/yt/'
+alias project='cd /mnt/KSS/Studies/projects/ '
+alias cyber='cd /mnt/KSS/Studies/cyber/'
+alias diaryd='cd /mnt/KSS/Studies/site/futurediary/'
+alias diary='nv /mnt/KSS/Studies/site/futurediary/"$(date +%a-%b-%d-%Y)".md'
 alias site='cd /mnt/KSS/Studies/site/ '
 alias tdu='rsync -avhUPz /mnt/KSS/Studies/todo/ phone:~/sdc/todo/ '
 alias tdd='rsync -avhUPz phone:~/sdc/todo/ /mnt/KSS/Studies/todo/ '
