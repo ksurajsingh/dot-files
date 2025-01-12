@@ -89,9 +89,9 @@ alias pntw2pc='rsync -avhUPz phone:/storage/E452-4B2F/towatch/  /mnt/KSS/Media/t
 
 
 #.spm update
-alias spm2pn='rsync -avhUPz  /home/suraj/.spm/spiderman.jpg phone:~/.spm/'
-alias spm2lap='rsync -avhUPz  spiderman.jpg laptop:/home/suraj/.spm/'
-alias spm2pc='rsync -avhUPz  spiderman.jpg pc:/home/suraj/.spm/'
+alias spm2pn='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg phone:~/.spm/'
+alias spm2lap='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg laptop:/mnt/KSS/.btrfssnapshots/.spm/'
+alias spm2pc='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg/ pc:/mnt/KSS/.btrfssnapshots/.spm/'
 
 #sem/private/el/dbms to lab/dbms/ 
 
@@ -114,7 +114,7 @@ alias sdd='cd /mnt/KSS/Studies/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
 alias todo='nvim /mnt/KSS/Studies/todo/todo'
 alias todod='cd /mnt/KSS/Studies/todo/'
-alias spm='cd /home/suraj/.spm/'
+alias spm='cd /mnt/KSS/.btrfssnapshots/.spm/'
 alias rvce='cd /mnt/KSS/Studies/rvce/'
 alias sem='cd /mnt/KSS/Studies/rvce/5thsem'
 alias backups='cd /mnt/KSS/Back_Ups'
@@ -144,7 +144,7 @@ alias zshup='cp ~/.zshrc ~/dot-files/.zshrc'
 alias ran='ranger'
 alias calc='deepin-calculator'
 alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu && yay -Syu'
-alias cod='nvim /home/suraj/.spm/.codes'
+alias cod='nvim /mnt/KSS/.btrfssnapshots/.spm/.codes'
 alias ref='sudo reflector --country 'India' --latest 5 --sort rate --save /etc/pacman.d/mirrorlist && pacman -Syy'
 alias lkey='gpg --list-keys --keyid-format long'
 alias lskey='gpg --list-secret-keys --keyid-format long'
