@@ -96,7 +96,9 @@ alias spm2pc='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg/ pc:/m
 #sem/private/el/dbms to lab/dbms/ 
 
 
-#commoners
+#ommoners
+alias scron='hyprctl dispatch dpms on'
+alias scroff='hyprctl dispatch dpms off'
 alias yt='cd ~/yt/'
 alias project='cd /mnt/KSS/Studies/projects/ '
 alias cyber='cd /mnt/KSS/Studies/cyber/'
@@ -105,7 +107,7 @@ alias diary='nv /mnt/KSS/Studies/site/futurediary/"$(date +%a-%b-%d-%Y)".md'
 alias site='cd /mnt/KSS/Studies/site/ '
 alias tdu='rsync -avhUPz /mnt/KSS/Studies/todo/ phone:~/sdc/todo/ '
 alias tdd='rsync -avhUPz phone:~/sdc/todo/ /mnt/KSS/Studies/todo/ '
-alias fzf='fzf --multi'
+alias fzf='fzf --multi '
 alias el='cd /mnt/KSS/Studies/rvce/5thsem/private/el/'
 alias lab='cd /mnt/KSS/Studies/rvce/5thsem/private/lab/'
 alias dsa='cd /mnt/KSS/Studies/dsa/'
