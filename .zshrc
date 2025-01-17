@@ -73,7 +73,7 @@ alias pc2lap='rsync -avUhPz --delete /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*
 alias lap2pc='rsync -avhUPz laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
 
 #Phoneupdates
-alias phoneup='dcim2pc && pnss2backups && ss2pn && sem2pn && pndocs2pc && docs2pn '
+alias phoneup='dcim2pc && pnss2backups && ss2pn && sem2pn && docs2pn && pndocs2pc '
 alias dcim2pc='rsync -avhUPz phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/camera/ '
 alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
 alias ss2pn='rsync -avhUPz /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
@@ -98,7 +98,7 @@ alias spm2pc='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg/ pc:/m
 
 #ommoners
 alias scron='hyprctl dispatch dpms on'
-alias scroff='hyprctl dispatch dpms off'
+#alias scroff='hyprctl dispatch dpms off'
 alias yt='cd ~/yt/'
 alias project='cd /mnt/KSS/Studies/projects/ '
 alias cyber='cd /mnt/KSS/Studies/cyber/'
@@ -110,7 +110,7 @@ alias tdd='rsync -avhUPz phone:~/sdc/todo/ /mnt/KSS/Studies/todo/ '
 alias fzf='fzf --multi '
 alias el='cd /mnt/KSS/Studies/rvce/5thsem/private/el/'
 alias lab='cd /mnt/KSS/Studies/rvce/5thsem/private/lab/'
-alias dsa='cd /mnt/KSS/Studies/dsa/'
+alias dsa='cd /mnt/KSS/Studies/dsa/Coding_ninja/Milestone_2/'
 alias chrome=google-chrome-stable
 alias sdd='cd /mnt/KSS/Studies/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
