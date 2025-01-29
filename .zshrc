@@ -59,7 +59,7 @@ setopt appendhistory
 #snapshots
 alias snapstudies='sudo btrfs subvolume snapshot /mnt/KSS/Learnings /mnt/KSS/.btrfssnapshots/Learnings_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapdocs='sudo btrfs subvolume snapshot /mnt/KSS/Documents /mnt/KSS/.btrfssnapshots/Documents_snapshot_$(date +"%Y%m%d_%H%M%S") '
-alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/Back_Ups /mnt/KSS/.btrfssnapshots/Back_Ups_snapshot_$(date +"%Y%m%d_%H%M%S") '
+alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/backUps /mnt/KSS/.btrfssnapshots/backUps_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssnapshots/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapall='snapmedia && snapdocs && snapstudies && snapbackups'
 
@@ -74,9 +74,9 @@ alias lap2pc='rsync -avhUPz laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclu
 
 #Phoneupdates
 alias phoneup='dcim2pc && pnss2backups && ss2pn && sem2pn && docs2pn && pndocs2pc '
-alias dcim2pc='rsync -avhUPz phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/Back_Ups/poco/dcim/camera/ '
-alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/Back_Ups/poco/dcim/screenshots/ '
-alias ss2pn='rsync -avhUPz /mnt/KSS/Back_Ups/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
+alias dcim2pc='rsync -avhUPz phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/backUps/poco/dcim/camera/ '
+alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/backUps/poco/dcim/screenshots/ '
+alias ss2pn='rsync -avhUPz /mnt/KSS/backUps/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
 alias sem2pn='rsync -avhUPz --delete /mnt/KSS/Learnings/rvce/5thsem/ phone:/storage/E452-4B2F/5thsem/ --exclude "*git*" --exclude "myenv" ' 
 alias pndocs2pc='rsync -avhUPz  phone:/storage/E452-4B2F/Documents/ /mnt/KSS/Documents/ '
 alias docs2pn='rsync -avhUPz /mnt/KSS/Documents/  phone:/storage/E452-4B2F/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
@@ -119,7 +119,7 @@ alias todod='cd /mnt/KSS/Learnings/todo/'
 alias spm='cd /mnt/KSS/.btrfssnapshots/.spm/'
 alias rvce='cd /mnt/KSS/Learnings/rvce/'
 alias sem='cd /mnt/KSS/Learnings/rvce/5thsem'
-alias backups='cd /mnt/KSS/Back_Ups'
+alias backups='cd /mnt/KSS/backUps'
 alias docs='cd /mnt/KSS/Documents/'
 alias scripts='cd ~/scripts'
 alias media='cd /mnt/KSS/Media/'
