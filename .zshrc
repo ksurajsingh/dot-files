@@ -68,7 +68,7 @@ alias lifeupdate='snapall && notify-send KSS-snapped && phoneup && notify-send p
 
 #KSS updates
 alias kssup='pc2lap && lap2pc'
-alias pc2lap='rsync -avUhPz --delete /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
+alias pc2lap='rsync -avUhPz /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
 alias lap2pc='rsync -avhUPz laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
 
 #Phoneupdates
