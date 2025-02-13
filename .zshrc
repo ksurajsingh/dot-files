@@ -25,7 +25,8 @@ load_silent
 #pokemon-colorscripts --no-title -s -r
 
 # fastfetch. Will be disabled if above colorscript was chosen to install
-fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
+# fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
+fastfetch
 # Set-up icons for files/folders in terminal
 alias ls='eza -a --icons'
 alias ll='eza -al --icons'
@@ -124,6 +125,7 @@ alias scripts='cd ~/scripts'
 alias media='cd /mnt/KSS/Media/'
 alias songs='cd /mnt/KSS/Media/songs/'
 alias playsongs='mpv /mnt/KSS/Media/songs/ --shuffle'
+alias psongs='songs && mpv "$(fzf)" '
 alias hypr='cd ~/.config/hypr'
 alias zsh='nvim ~/.zshrc'
 alias gs='git status'
