@@ -100,6 +100,7 @@ alias spm2pc='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg/ pc:/m
 alias scron='hyprctl dispatch dpms on'
 #alias scroff='hyprctl dispatch dpms off'
 alias yt='cd ~/yt/'
+alias cpu='cpupower frequency-info'
 alias project='cd /mnt/KSS/Learnings/projects/ '
 alias cyber='cd /mnt/KSS/Learnings/cyber/'
 alias diaryd='cd /mnt/KSS/Learnings/site/futurediary/'
