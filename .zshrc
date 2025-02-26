@@ -1,7 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-#
-tmux source-file ~/.config/tmux/.tmux.conf
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="random"
@@ -13,7 +11,8 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-function load_silent(){
+function load_silent(){ 
+  tmux source-file ~/.config/tmux/.tmux.conf
   source $ZSH/oh-my-zsh.sh 
 } &> /dev/null
 
@@ -79,7 +78,7 @@ alias phoneup='dcim2pc && pnss2backups && ss2pn && sem2pn && docs2pn && pndocs2p
 alias dcim2pc='rsync -avhUPz phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/backUps/poco/dcim/camera/ '
 alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/backUps/poco/dcim/screenshots/ '
 alias ss2pn='rsync -avhUPz /mnt/KSS/backUps/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
-alias sem2pn='rsync -avhUPz /mnt/KSS/Learnings/rvce/5thsem/ phone:/storage/E452-4B2F/5thsem/ --exclude "*git*" --exclude "myenv" ' 
+alias sem2pn='rsync -avhUPz --delete /mnt/KSS/Learnings/rvce/5thsem/ phone:/storage/E452-4B2F/5thsem/ --exclude "*git*" --exclude "myenv" ' 
 alias pndocs2pc='rsync -avhUPz  phone:/storage/E452-4B2F/Documents/ /mnt/KSS/Documents/ '
 alias docs2pn='rsync -avhUPz /mnt/KSS/Documents/  phone:/storage/E452-4B2F/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
 
@@ -156,7 +155,6 @@ alias lkey='gpg --list-keys --keyid-format long'
 alias lskey='gpg --list-secret-keys --keyid-format long'
 alias de='bash de'
 alias en='bash en'
-alias lc='ls -al'
 alias dotpush='cd ~/dot-files && ac  && git push -f dots main'
 alias dotpull='cd ~/dot-files && git pull dots main'
 alias zshdown='cp ~/dot-files/.zshrc ~/.zshrc && source ~/.zshrc'
@@ -174,7 +172,6 @@ alias gc=" git commit -am "
 alias garuda='nmcli connection up "Garuda 2.4Ghz"'
 alias ss='scrot -s /mnt/KSS/Media/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
 alias nl='newlook'
-alias ll="ls -al --color=never"
 alias pnl='pkill newlook'
 alias nv=nvim
 alias gift='cd ~/gift && ./takegift' 
