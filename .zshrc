@@ -114,6 +114,7 @@ alias tdd='rsync -avhUPz phone:~/sdc/todo/ /mnt/KSS/Learnings/todo/ '
 alias fzf='fzf --multi '
 alias el='cd /mnt/KSS/Learnings/rvce/6thsem/private/el/'
 alias lab='cd /mnt/KSS/Learnings/rvce/6thsem/private/lab/'
+alias hms='cd /mnt/KSS/Learnings/hms/ '
 alias dsa='cd /mnt/KSS/Learnings/dsa/codingNinja/Milestone_3/'
 alias chrome=google-chrome-stable
 alias lrn='cd /mnt/KSS/Learnings/ '
