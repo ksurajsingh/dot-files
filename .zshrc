@@ -172,7 +172,6 @@ alias fast='fastfetch'
 alias pf='pfetch'
 alias ac=" git commit -am "Auto-commit" "
 alias gc=" git commit -am "
-alias gcc='git checkout'
 alias garuda='nmcli connection up "Garuda 2.4Ghz"'
 alias ss='scrot -s /mnt/KSS/Media/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
 alias sss='cd /mnt/KSS/backUps/poco/dcim/screenshots/ '
