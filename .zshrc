@@ -23,11 +23,11 @@ load_silent
 
 # Display Pokemon-colorscripts
 # Project page: https://gitlab.com/phoneybadger/pokemon-colorscripts#on-other-distros-and-macos
-#pokemon-colorscripts --no-title -s -r
+pokemon-colorscripts --no-title -s -r
 
 # fastfetch. Will be disabled if above colorscript was chosen to install
 # fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
-fastfetch
+#fastfetch
 # Set-up icons for files/folders in terminal
 alias ls='eza -a --icons'
 alias ll='eza -al --icons'
@@ -74,7 +74,7 @@ alias pc2lap='rsync -avUhPz /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclu
 alias lap2pc='rsync -avhUPz laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
 
 #Phoneupdates
-alias phoneup='dcim2pc && pnss2backups && ss2pn && sem2pn && docs2pn && pndocs2pc '
+alias phoneup='dcim2pc '
 alias dcim2pc='rsync -avhUPz phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/backUps/poco/dcim/camera/ '
 alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/backUps/poco/dcim/screenshots/ '
 alias ss2pn='rsync -avhUPz /mnt/KSS/backUps/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
