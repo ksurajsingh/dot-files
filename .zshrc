@@ -92,7 +92,7 @@ alias pntw2pc='rsync -avhUPz phone:/storage/E452-4B2F/towatch/  /mnt/KSS/Media/t
 #.spm update
 alias spm2pn='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg phone:~/.spm/'
 alias spm2lap='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg laptop:/mnt/KSS/.btrfssnapshots/.spm/'
-alias spm2pc='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg/ pc:/mnt/KSS/.btrfssnapshots/.spm/'
+alias spm2pc='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg pc:/mnt/KSS/.btrfssnapshots/.spm/'
 
 #sem/private/el/dbms to lab/dbms/ 
 
