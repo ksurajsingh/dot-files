@@ -74,7 +74,7 @@ alias pc2lap='rsync -avUhPz /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclu
 alias lap2pc='rsync -avhUPz laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
 
 #Phoneupdates
-alias phoneup='dcim2pc '
+alias phoneup='dcim2pc && docs2pn && pndocs2pc'
 alias dcim2pc='rsync -avhUPz phone:/storage/E452-4B2F/DCIM/Camera/ /mnt/KSS/backUps/poco/dcim/camera/ '
 alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/backUps/poco/dcim/screenshots/ '
 alias ss2pn='rsync -avhUPz /mnt/KSS/backUps/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
@@ -106,6 +106,7 @@ alias yt='cd ~/yt/'
 alias cpu='cpupower frequency-info'
 alias project='cd /mnt/KSS/Learnings/projects/ '
 alias cwh='cd /mnt/KSS/Learnings/projects/fsd/cwh/ '
+alias pushtomain="gph && gck main && gm dev && gph && gck dev" 
 alias cyber='cd /mnt/KSS/Learnings/cyber/'
 alias diaryd='cd /mnt/KSS/Learnings/site/futurediary/'
 alias site='cd /mnt/KSS/Learnings/site/ '
