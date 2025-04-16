@@ -97,7 +97,8 @@ alias spm2pc='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg pc:/mn
 #sem/private/el/dbms to lab/dbms/ 
 
 
-#ommoners
+#commoners
+alias tmp='cd ~/tmp'
 alias scron='hyprctl dispatch dpms on'
 alias prep='cd /mnt/KSS/Learnings/rvce/placementprep/'
 alias open='xdg-open'
