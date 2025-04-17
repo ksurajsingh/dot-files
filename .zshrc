@@ -61,7 +61,7 @@ setopt appendhistory
 #snapshots
 alias snapstudies='sudo btrfs subvolume snapshot /mnt/KSS/Learnings /mnt/KSS/.btrfssnapshots/Learnings/Learnings_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapdocs='sudo btrfs subvolume snapshot /mnt/KSS/Documents /mnt/KSS/.btrfssnapshots/Documents/Documents_snapshot_$(date +"%Y%m%d_%H%M%S") '
-alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/backUps /mnt/KSS/.btrfssnapshots/backUpz/backUps_snapshot_$(date +"%Y%m%d_%H%M%S") '
+alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/backUps /mnt/KSS/.btrfssnapshots/backUps/backUps_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssnapshots/Media/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapall='snapmedia && snapdocs && snapstudies && snapbackups'
 
