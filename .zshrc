@@ -2,6 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
+alias greet='echo "Hello from alias!"'
+
 ZSH_THEME="random"
 
 plugins=(
@@ -23,15 +25,19 @@ load_silent
 
 # Display Pokemon-colorscripts
 # Project page: https://gitlab.com/phoneybadger/pokemon-colorscripts#on-other-distros-and-macos
-pokemon-colorscripts --no-title -s -r
+# pokemon-colorscripts --no-title -s -r
+
+pokemon-colorscripts --no-title -s -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
 
 # fastfetch. Will be disabled if above colorscript was chosen to install
 # fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 #fastfetch
 # Set-up icons for files/folders in terminal
-alias ls='eza -a --icons'
+# alias ls='eza -a --icons'
+alias ls='lsd'
 alias ll='eza -al --icons'
 alias lt='eza -a --tree --level=1 --icons'
+alias l='ls -lah'
 
 #change cursor color after each prompt
 cursor_change_color(){
@@ -119,6 +125,7 @@ alias lab='cd /mnt/KSS/Learnings/rvce/6thsem/lab/'
 alias label='cd /mnt/KSS/Learnings/rvce/6thsem/private/label/'
 alias hms='cd /mnt/KSS/Learnings/hms/ '
 alias dsa='cd /mnt/KSS/Learnings/dsa/dsawcbook/'
+alias lan='cd /mnt/KSS/Learnings/languages/'
 alias chrome=google-chrome-stable
 alias lrn='cd /mnt/KSS/Learnings/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
