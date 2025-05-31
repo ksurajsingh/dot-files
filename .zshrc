@@ -176,6 +176,7 @@ alias de='bash de'
 alias en='bash en'
 alias dotpush='cd ~/dot-files && ac  && git push -f dots main'
 alias dotpull='cd ~/dot-files && git pull dots main'
+alias dots='cd ~/dot-files'
 alias zshdown='cp ~/dot-files/.zshrc ~/.zshrc && source ~/.zshrc'
 alias chgit=" git config --global user.name "Surajk013" && git config --global user.email "surajsinghk013@gmail.com" "
 alias cve='rvce && cd CVE'
