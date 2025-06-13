@@ -1,6 +1,6 @@
 # TODO
 
-- [x]Interactive prediction tool  
+[x]Interactive prediction tool  
 - [ ]Historical Data view  
 - [ ]Rainfall crop correlation analysis  
   
