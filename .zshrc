@@ -195,6 +195,7 @@ alias zshup='cp ~/.zshrc ~/dot-files/.zshrc'
 alias sss='cd /mnt/KSS/backUps/poco/dcim/screenshots/ '
 alias hkirat='cd /mnt/KSS/Learnings/fsd/mern/harkirathsingh/ '
 alias tmp='cd ~/tmp'
+alias app='cd /mnt/KSS/Learnings/rvce/placements/applications/'
 alias yt='cd /mnt/KSS/Media/yt/'
 alias cwh='cd /mnt/KSS/Learnings/fsd/cwh/ '
 alias fsd='cd /mnt/KSS/Learnings/fsd/ '
@@ -230,8 +231,6 @@ alias media='cd /mnt/KSS/Media/'
 alias songs='cd /mnt/KSS/Media/songs/'
 alias hypr='cd ~/.config/hypr'
 alias fnf='cd /mnt/KSS/Learnings/fsd/fnf/'
-alias app='cd /mnt/KSS/Learnings/rvce/placements/applications/'
-alias intern='cd /mnt/KSS/Learnings/rvce/placements/gotplaced/internship_onetrust_10l_fte/'
 
 
 # Created by `pipx` on 2024-12-29 05:42:19
