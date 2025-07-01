@@ -194,7 +194,7 @@ alias sss='cd /mnt/KSS/backUps/poco/dcim/screenshots/ '
 alias nl='newlook'
 alias pnl='pkill newlook'
 alias nv=nvim
-alias gift='cd ~/gift && ./takegift' 
+alias kset='xset r rate 200 50'
 
 # Created by `pipx` on 2024-12-29 05:42:19
 export PATH="$PATH:/home/suraj/.local/bin"
