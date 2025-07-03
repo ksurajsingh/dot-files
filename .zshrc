@@ -193,8 +193,8 @@ alias ss='scrot -s /mnt/KSS/Media/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
 alias sss='cd /mnt/KSS/backUps/poco/dcim/screenshots/ '
 alias nl='newlook'
 alias pnl='pkill newlook'
-alias nv=nvim
-alias kset='xset r rate 200 50'
+alias nv='nvim'
+alias rm='rm -v'
 
 # Created by `pipx` on 2024-12-29 05:42:19
 export PATH="$PATH:/home/suraj/.local/bin"
