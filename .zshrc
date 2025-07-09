@@ -60,77 +60,147 @@ SAVEHIST=10000
 setopt appendhistory
 
 
-#setting alias for faster workflow
+
+# # Memories [ Deprecated ]
+#
+# alias waldown='find ~/Downloads -type f \( -name "*.mp4" -o -name "*.jpeg" -o -name "*.jpg" -o -name "*.png" \) -exec mv {} /mnt/KSS/Media/wallpapers/ \;'
+#
+# # wholesome
+# alias lifeupdate='snapall && notify-send KSS-snapped && phoneup && notify-send phoneup && kssup && notify-send KSSUP && phoneup && notify-send life updated && notify-send upgrading system && archup'
+#
+# #KSS updates
+# alias kssup='pc2lap && lap2pc'
+# alias pc2lap='rsync -avUhPz /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
+# alias lap2pc='rsync -avhUPz laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
+#
+# #Phoneupdates
+# alias phoneup='dcim2pc && docs2pn && pndocs2pc'
+# alias dcim2pc='rsync -avhUPz phone:/storage/D15D-6264/DCIM/Camera/ /mnt/KSS/backUps/poco/dcim/camera/ '
+# alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/backUps/poco/dcim/screenshots/ '
+# alias ss2pn='rsync -avhUPz /mnt/KSS/backUps/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
+# alias sem2pn='rsync -avhUPz --delete /mnt/KSS/Learnings/rvce/6thsem/ phone:/storage/D15D-6264/6thsem/ --exclude "*git*" --exclude "myenv" ' 
+# alias pndocs2pc='rsync -avhUPz  phone:/storage/D15D-6264/Documents/ /mnt/KSS/Documents/ '
+# alias docs2pn='rsync -avhUPz /mnt/KSS/Documents/  phone:/storage/D15D-6264/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
+# alias songs2pn='rsync -ahUPz /mnt/KSS/Media/songs phone:/storage/D15D-6264/ '
+# alias pnsongs2pc='rsync -ahUPz phone:/storage/D15D-6264/songs /mnt/KSS/Media/ '
+# alias pnsem2pc='rsync -avhUPz  phone:/storage/D15D-6264/6thsem/ /mnt/KSS/Learnings/rvce/6thsem/ '
+# alias tw2pn='rsync -avhUPz /mnt/KSS/Media/towatch/* phone:/storage/D15D-6264/towatch/'
+# alias pntw2pc='rsync -avhUPz phone:/storage/D15D-6264/towatch/  /mnt/KSS/Media/towatch/ '
+# alias tdu='rsync -avhUPz /mnt/KSS/Learnings/todo/ phone:~/sdc/todo/ '
+# alias tdd='rsync -avhUPz phone:~/sdc/todo/ /mnt/KSS/Learnings/todo/ '
 
 
 
-#snapshots
+
+# setting alias for faster workflow
+
+
+
+# Rice
+alias neo='neofetch'
+alias uwu='uwufetch'
+alias fast='fastfetch'
+alias pf='pfetch'
+
+# Devices
+alias lap='mosh laptop'
+alias pn='mosh phone'
+alias pc='mosh pc'
+
+# Routines
+alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu && notify-send -u critical "Pacman-Update [pwd required]" && yay -Syu && notify-send "yay-Updated" || notify-send -u critical "password-required" && echo -e "\n\nArch Successfully Updated\n" '
+alias ref='sudo reflector --country 'India' --latest 5 --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syy'
+
+# snapshots
+alias snapall='snapmedia && snapdocs && snapstudies && snapbackups'
 alias snapstudies='sudo btrfs subvolume snapshot /mnt/KSS/Learnings /mnt/KSS/.btrfssnapshots/Learnings/Learnings_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapdocs='sudo btrfs subvolume snapshot /mnt/KSS/Documents /mnt/KSS/.btrfssnapshots/Documents/Documents_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/backUps /mnt/KSS/.btrfssnapshots/backUps/backUps_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssnapshots/Media/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
-alias snapall='snapmedia && snapdocs && snapstudies && snapbackups'
-
-#wholesome
-alias lifeupdate='snapall && notify-send KSS-snapped && phoneup && notify-send phoneup && kssup && notify-send KSSUP && phoneup && notify-send life updated && notify-send upgrading system && archup'
-
-#KSS updates
-alias kssup='pc2lap && lap2pc'
-alias pc2lap='rsync -avUhPz /mnt/KSS/ laptop:/mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
-alias lap2pc='rsync -avhUPz laptop:/mnt/KSS/ /mnt/KSS/ --exclude "*git*" --exclude "*myenv*" --exclude ".btrfssnapshots" --exclude "codes" '
-
-#Phoneupdates
-alias phoneup='dcim2pc && docs2pn && pndocs2pc'
-alias dcim2pc='rsync -avhUPz phone:/storage/D15D-6264/DCIM/Camera/ /mnt/KSS/backUps/poco/dcim/camera/ '
-alias pnss2backups='rsync -avhUPz phone:/storage/emulated/0/DCIM/Screenshots/ /mnt/KSS/backUps/poco/dcim/screenshots/ '
-alias ss2pn='rsync -avhUPz /mnt/KSS/backUps/poco/dcim/screenshots/ phone:/storage/emulated/0/DCIM/Screenshots/ '
-alias sem2pn='rsync -avhUPz --delete /mnt/KSS/Learnings/rvce/6thsem/ phone:/storage/D15D-6264/6thsem/ --exclude "*git*" --exclude "myenv" ' 
-alias pndocs2pc='rsync -avhUPz  phone:/storage/D15D-6264/Documents/ /mnt/KSS/Documents/ '
-alias docs2pn='rsync -avhUPz /mnt/KSS/Documents/  phone:/storage/D15D-6264/Documents/ --exclude "*git*" --exclude "myenv" --exclude "*.zip"' 
-
-alias songs2pn='rsync -ahUPz /mnt/KSS/Media/songs phone:/storage/D15D-6264/ '
-alias pnsongs2pc='rsync -ahUPz phone:/storage/D15D-6264/songs /mnt/KSS/Media/ '
-alias pnsem2pc='rsync -avhUPz  phone:/storage/D15D-6264/6thsem/ /mnt/KSS/Learnings/rvce/6thsem/ '
-alias tw2pn='rsync -avhUPz /mnt/KSS/Media/towatch/* phone:/storage/D15D-6264/towatch/'
-alias pntw2pc='rsync -avhUPz phone:/storage/D15D-6264/towatch/  /mnt/KSS/Media/towatch/ '
-
 
 #.spm update
 alias spm2pn='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg phone:~/.spm/'
 alias spm2lap='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg laptop:/mnt/KSS/.btrfssnapshots/.spm/'
 alias spm2pc='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg pc:/mnt/KSS/.btrfssnapshots/.spm/'
 
-#sem/private/el/dbms to lab/dbms/ 
 
+# Git 
+alias chgit=" git config --global user.name "Surajk013" && git config --global user.email "surajsinghk013@gmail.com" "
+alias gs='git status'
+alias gph='git push'
+alias gpl='git pull'
+alias gl='git log'
+alias gck='git checkout'
+alias gmg='git merge'
+alias ac=" git commit -am "Auto-commit" "
+alias gc=" git commit -am "
+alias devtomain="gph && gck main && gm dev && gph && gck dev" 
+alias dotpush='cd ~/dot-files && ac  && git push -f dots main'
+alias dotpull='cd ~/dot-files && git pull dots main'
 
-#commoners
-alias tmp='cd ~/tmp'
-alias scron='hyprctl dispatch dpms on'
-alias prep='cd /mnt/KSS/Learnings/rvce/placementprep/'
-alias open='xdg-open'
-#alias scroff='hyprctl dispatch dpms off'
-alias yt='cd /mnt/KSS/Media/yt/'
+# Bluetooth
+alias enco='bluetoothctl scan on && bluetoothctl connect 2C:FD:B4:7E:65:6A '
+alias onbz='pactl set-default-sink bluez_output.2C_FD_B4_7E_65_6A.1'
+alias onpc='pactl set-default-sink alsa_output.pci-0000_00_1f.3.hdmi-stereo'
+alias speaker='bluetoothctl connect B4:20:53:C3:09:A4'
+alias poco='bluetoothctl connect 10:3F:44:8B:06:F2'
+
+# Media
+alias towatch='mpv /mnt/KSS/Media/towatch/* --shuffle --fullscreen'
+alias towatchd='cd /mnt/KSS/Media/towatch'
+alias tolisten='mpv /mnt/KSS/Media/tolisten/* --shuffle'
+alias tolistend='cd /mnt/KSS/Media/tolisten/'
+alias psongs='songs && mpv "$(fzf)" '
+
+# CLI
+alias lkey='gpg --list-keys --keyid-format long'
+alias lskey='gpg --list-secret-keys --keyid-format long'
+alias de='bash de'
+alias en='bash en'
+alias zshdown='cp ~/dot-files/.zshrc ~/.zshrc && source ~/.zshrc'
+alias garuda='nmcli connection up "Garuda 2.4Ghz"'
+alias ss='scrot -s /mnt/KSS/Media/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
+alias nl='newlook'
+alias pnl='pkill newlook'
+alias rm='rm -v'
+alias mv='mv -v'
+alias cp='cp -v'
+alias fzf='fzf --multi '
 alias cpu='watch cpupower frequency-info'
+
+# Opening Stuff
+alias ran='ranger'
+alias calc='deepin-calculator'
+alias cod='nvim /mnt/KSS/.btrfssnapshots/.spm/.codes'
+alias nv='nvim'
+alias open='xdg-open'
+alias chrome='google-chrome-stable'
+alias todo='nvim /mnt/KSS/Learnings/todo/todo'
+alias zsh='nvim ~/.zshrc'
+
+# Navigation
+alias dots='cd ~/dot-files'
+alias down='cd ~/Downloads'
+alias wall='cd /mnt/KSS/Media/wallpapers/'
+alias zshup='cp ~/.zshrc ~/dot-files/.zshrc'
+alias sss='cd /mnt/KSS/backUps/poco/dcim/screenshots/ '
 alias project='cd /mnt/KSS/Learnings/projects/ '
+alias tmp='cd ~/tmp'
+alias prep='cd /mnt/KSS/Learnings/rvce/placementprep/'
+alias yt='cd /mnt/KSS/Media/yt/'
 alias cwh='cd /mnt/KSS/Learnings/projects/fsd/cwh/ '
-alias pushtomain="gph && gck main && gm dev && gph && gck dev" 
-alias cyber='cd /mnt/KSS/Learnings/cyber/'
+alias sec='cd /mnt/KSS/Learnings/cybersec/'
 alias diaryd='cd /mnt/KSS/Learnings/site/futurediary/'
 alias site='cd /mnt/KSS/Learnings/site/ '
-alias tdu='rsync -avhUPz /mnt/KSS/Learnings/todo/ phone:~/sdc/todo/ '
-alias tdd='rsync -avhUPz phone:~/sdc/todo/ /mnt/KSS/Learnings/todo/ '
-alias fzf='fzf --multi '
 alias el='cd /mnt/KSS/Learnings/rvce/6thsem/private/el/'
 alias idp='cd /mnt/KSS/Learnings/rvce/6thsem/private/idp/'
 alias lab='cd /mnt/KSS/Learnings/rvce/6thsem/lab/'
 alias label='cd /mnt/KSS/Learnings/rvce/6thsem/private/label/'
 alias hms='cd /mnt/KSS/Learnings/hms/ '
-alias dsa='cd /mnt/KSS/Learnings/dsa/dsawcbook/'
+alias dsa='cd /mnt/KSS/Learnings/dsa/'
 alias lan='cd /mnt/KSS/Learnings/languages/'
-alias chrome=google-chrome-stable
 alias lrn='cd /mnt/KSS/Learnings/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
-alias todo='nvim /mnt/KSS/Learnings/todo/todo'
 alias todod='cd /mnt/KSS/Learnings/todo/'
 alias spm='cd /mnt/KSS/.btrfssnapshots/.spm/'
 alias rvce='cd /mnt/KSS/Learnings/rvce/'
@@ -142,59 +212,9 @@ alias docs='cd /mnt/KSS/Documents/'
 alias scripts='cd ~/scripts'
 alias media='cd /mnt/KSS/Media/'
 alias songs='cd /mnt/KSS/Media/songs/'
-alias psongs='songs && mpv "$(fzf)" '
 alias hypr='cd ~/.config/hypr'
-alias zsh='nvim ~/.zshrc'
-alias gs='git status'
-alias gph='git push'
-alias gpl='git pull'
-alias gl='git log'
-alias gck='git checkout'
-alias gmg='git merge'
-alias towatch='mpv /mnt/KSS/Media/towatch/* --shuffle --fullscreen'
-alias towatchd='cd /mnt/KSS/Media/towatch'
-alias tolisten='mpv /mnt/KSS/Media/tolisten/* --shuffle'
-alias tolistend='cd /mnt/KSS/Media/tolisten/'
-alias enco='bluetoothctl scan on && bluetoothctl connect 2C:FD:B4:7E:65:6A '
-alias onbz='pactl set-default-sink bluez_output.2C_FD_B4_7E_65_6A.1'
-alias onpc='pactl set-default-sink alsa_output.pci-0000_00_1f.3.hdmi-stereo'
-alias speaker='bluetoothctl connect B4:20:53:C3:09:A4'
-alias poco='bluetoothctl connect 10:3F:44:8B:06:F2'
-alias down='cd ~/Downloads'
-alias wall='cd /mnt/KSS/Media/wallpapers/'
-alias waldown='find ~/Downloads -type f \( -name "*.mp4" -o -name "*.jpeg" -o -name "*.jpg" -o -name "*.png" \) -exec mv {} /mnt/KSS/Media/wallpapers/ \;'
-alias zshup='cp ~/.zshrc ~/dot-files/.zshrc'
-alias ran='ranger'
-alias calc='deepin-calculator'
-alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu && notify-send -u critical "Pacman-Update [pwd required]" && yay -Syu && notify-send "yay-Updated" || notify-send -u critical "password-required" && echo -e "\n\nArch Successfully Updated\n" '
-alias cod='nvim /mnt/KSS/.btrfssnapshots/.spm/.codes'
-alias ref='sudo reflector --country 'India' --latest 5 --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syy'
-alias lkey='gpg --list-keys --keyid-format long'
-alias lskey='gpg --list-secret-keys --keyid-format long'
-alias de='bash de'
-alias en='bash en'
-alias dotpush='cd ~/dot-files && ac  && git push -f dots main'
-alias dotpull='cd ~/dot-files && git pull dots main'
-alias dots='cd ~/dot-files'
-alias zshdown='cp ~/dot-files/.zshrc ~/.zshrc && source ~/.zshrc'
-alias chgit=" git config --global user.name "Surajk013" && git config --global user.email "surajsinghk013@gmail.com" "
-alias cve='rvce && cd CVE'
-alias lap='mosh laptop'
-alias pn='mosh phone'
-alias pc='mosh pc'
-alias neo='neofetch'
-alias uwu='uwufetch'
-alias fast='fastfetch'
-alias pf='pfetch'
-alias ac=" git commit -am "Auto-commit" "
-alias gc=" git commit -am "
-alias garuda='nmcli connection up "Garuda 2.4Ghz"'
-alias ss='scrot -s /mnt/KSS/Media/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
-alias sss='cd /mnt/KSS/backUps/poco/dcim/screenshots/ '
-alias nl='newlook'
-alias pnl='pkill newlook'
-alias nv='nvim'
-alias rm='rm -v'
+
+
 
 # Created by `pipx` on 2024-12-29 05:42:19
 export PATH="$PATH:/home/suraj/.local/bin"
