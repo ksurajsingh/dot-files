@@ -125,7 +125,8 @@ alias spm2pc='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg pc:/mn
 
 
 # Git 
-alias chgit=" git config --global user.name "Surajk013" && git config --global user.email "surajsinghk013@gmail.com" "
+alias maingit=" git config --global user.name "ksurajsingh" && git config --global user.email "surajsinghk013@gmail.com" "
+alias ictgit=" git config --global user.name "ictttb" && git config --global user.email "ictttb@gmail.com" "
 alias gs='git status'
 alias gph='git push'
 alias gpl='git pull'
@@ -218,3 +219,8 @@ alias hypr='cd ~/.config/hypr'
 
 # Created by `pipx` on 2024-12-29 05:42:19
 export PATH="$PATH:/home/suraj/.local/bin"
+
+
+# for pyenv's virtualenvs plugin 
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
