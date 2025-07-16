@@ -176,7 +176,6 @@ alias cod='nvim /mnt/KSS/.btrfssnapshots/.spm/.codes'
 alias nv='nvim'
 alias open='xdg-open'
 alias chrome='google-chrome-stable'
-alias todo='nvim /mnt/KSS/Learnings/todo/todo'
 alias zsh='nvim ~/.zshrc'
 
 # Navigation
@@ -190,6 +189,10 @@ alias tmp='cd ~/tmp'
 alias prep='cd /mnt/KSS/Learnings/rvce/placementprep/'
 alias yt='cd /mnt/KSS/Media/yt/'
 alias cwh='cd /mnt/KSS/Learnings/fsd/cwh/ '
+alias fsd='cd /mnt/KSS/Learnings/fsd/ '
+alias ai='cd /mnt/KSS/Learnings/ai/ '
+alias ops='cd /mnt/KSS/Learnings/devops/ '
+alias fun='cd /mnt/KSS/Learnings/fundamentals/ '
 alias sec='cd /mnt/KSS/Learnings/cybersec/'
 alias diaryd='cd /mnt/KSS/Learnings/site/futurediary/'
 alias site='cd /mnt/KSS/Learnings/site/ '
@@ -220,6 +223,7 @@ alias hypr='cd ~/.config/hypr'
 # Created by `pipx` on 2024-12-29 05:42:19
 export PATH="$PATH:/home/suraj/.local/bin"
 
+export todod="/mnt/KSS/Learnings/todo/"
 
 # for pyenv's virtualenvs plugin 
 eval "$(pyenv init -)"
