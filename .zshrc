@@ -3,7 +3,8 @@
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -127,44 +128,50 @@ function postcmd(){
 
 precmd_functions+=(postcmd)
 
+java() {
+  javac "$1.java" && java "$1"
+}
+
 alias zshup='rsync -avhPz --update ~/.zshrc ~/dot-files/'
 alias zshdown='rsync -avhPz --update ~/dot-files/ ~/.zshrc'
 alias dotpush='cd ~/dot-files/ && ac && gph'
-alias sdc='cd /storage/E452-4B2F/ '
-alias pushsongs2pc='rsync -avhPz --update /storage/E452-4B2F/Songs/ pc:/mnt/KSS/Media/Songs/ '
-alias pushsongs2lap='rsync -avhPz --update /storage/E452-4B2F/Songs/ pc:/mnt/KSS/Media/Songs/ '
-alias spm2lap='rsync -avhPz --update spiderman.jpg laptop:/home/suraj/.spm/'
-alias spm2pc='rsync -avhPz --update spiderman.jpg pc:/home/suraj/.spm/'
+alias sdc='cd /storage/D15D-6264/ '
+alias pushsongs2pc='rsync -avhPz --update /storage/D15D-6264/Songs/ pc:/mnt/KSS/Media/Songs/ '
+alias pushsongs2lap='rsync -avhPz --update /storage/D15D-6264/Songs/ pc:/mnt/KSS/Media/Songs/ '
+alias spm2lap='rsync -avhPz --update .spiderman.jpg laptop:/mnt/KSS/.btrfssnapshots/.spm/'
+alias spm2pc='rsync -avhPz --update .spiderman.jpg pc:/mnt/KSS/.btrfssnapshots/.spm/'
 alias intstr='cd /storage/emulated/0/'
-alias playsongs='mpv /storage/E452-4B2F/songs/ --shuffle'
-alias songs='cd /storage/E452-4B2F/songs/'
-alias todo='nvim ~/todo/todo'
+alias playsongs='mpv /storage/D15D-6264/songs/ --shuffle'
+alias psongs='cd /storage/D15D-6264/songs/ && mpv "$(fzf)" '
+alias songs='cd /storage/D15D-6264/songs/'
+alias todo='nvim ~/sdc/todo/todo.md'
 alias todod='cd ~/sdc/todo'
 alias spm='cd ~/.spm/'
 alias de='bash de'
-alias docs='cd /storage/E452-4B2F/Documents/ '
+alias tmp='cd ~/tmp/'
+alias docs='cd /storage/D15D-6264/Documents/ '
 alias en='bash en'
 alias ran='ranger'
-alias rvce='cd /storage/E452-4B2F/rvce/'
-alias sem='cd /storage/E452-4B2F/5thsem/'
+alias rvce='cd /storage/D15D-6264/rvce/'
+alias sem='cd /storage/D15D-6264/6thsem/'
 alias zsh='nvim ~/.zshrc'
 alias gs='git status'
-alias towatch='mpv /storage/E452-4B2F/towatch/* --shuffle'
-alias towatchd='cd /storage/E452-4B2F/towatch/'
-alias tolisten='mpv /storage/E452-4B2F/tolisten/* --shuffle'
-alias tolistend='cd /storage/E452-4B2F/tolisten/'
+alias towatch='mpv /storage/D15D-6264/towatch/* --shuffle'
+alias towatchd='cd /storage/D15D-6264/towatch/'
+alias tolisten='mpv /storage/D15D-6264/tolisten/* --shuffle'
+alias tolistend='cd /storage/D15D-6264/tolisten/'
 alias down='cd /storage/emulated/0/Download/'
 alias fu='pkg update && pkg upgrade && apt update && apt upgrade && pkg autoclean && apt autoclean & apt autoremove'
-alias sdc='cd  /storage/E452-4B2F'
-alias clips='cd /storage/E452-4B2F/clips/ '
+alias sdc='cd  /storage/D15D-6264'
+alias clips='cd /storage/D15D-6264/clips/ '
 alias cod='nvim ~/.spm/.codes'
 alias ac=" git commit -am  "Auto commit" "
 alias gc=" git commit -am "
 alias gph='git push'
 alias gpl='git pull'
 alias nv='nvim'
-alias tdu="cd /storage/E452-4B2F/todo && gc && git push todo main"
-alias tdd="cd /storage/E452-4B2F/todo/ && git pull todo main"
+alias tdu="rsync -avhUPz ~/sdc/todo/ pc:/mnt/KSS/Learnings/todo/ "
+alias tdd="rsync -avhUPz pc:/mnt/KSS/Learnings/todo/ ~/sdc/todo "
 alias pc='mosh pc'
 alias lap='mosh laptop'
 alias neo='neofetch'
