@@ -223,7 +223,6 @@ alias hypr='cd ~/.config/hypr'
 # Created by `pipx` on 2024-12-29 05:42:19
 export PATH="$PATH:/home/suraj/.local/bin"
 
-export todod="/mnt/KSS/Learnings/todo/"
 
 # for pyenv's virtualenvs plugin 
 eval "$(pyenv init -)"
