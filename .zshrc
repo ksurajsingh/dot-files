@@ -175,6 +175,9 @@ alias tdd="rsync -avhUPz pc:/mnt/KSS/Learnings/todo/ ~/sdc/todo "
 alias pc='mosh pc'
 alias lap='mosh laptop'
 alias neo='neofetch'
+alias mv='mv -v'
+alias rm='rm -v'
+alias cp='cp -v'
 
 export EDITOR=nvim
 export VISUAL=nvim
