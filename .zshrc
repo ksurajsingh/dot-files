@@ -187,7 +187,7 @@ alias zshup='cp ~/.zshrc ~/dot-files/.zshrc'
 alias sss='cd /mnt/KSS/backUps/poco/dcim/screenshots/ '
 alias hkirat='cd /mnt/KSS/Learnings/fsd/mern/harkirathsingh/ '
 alias tmp='cd ~/tmp'
-alias prep='cd /mnt/KSS/Learnings/rvce/placementprep/'
+alias prep='cd /mnt/KSS/Learnings/rvce/placement/'
 alias yt='cd /mnt/KSS/Media/yt/'
 alias cwh='cd /mnt/KSS/Learnings/fsd/cwh/ '
 alias fsd='cd /mnt/KSS/Learnings/fsd/ '
@@ -221,7 +221,7 @@ alias scripts='cd ~/scripts'
 alias media='cd /mnt/KSS/Media/'
 alias songs='cd /mnt/KSS/Media/songs/'
 alias hypr='cd ~/.config/hypr'
-
+alias fnf='cd /mnt/KSS/Learnings/fsd/fnf/'
 
 
 # Created by `pipx` on 2024-12-29 05:42:19
@@ -231,3 +231,4 @@ export PATH="$PATH:/home/suraj/.local/bin"
 # for pyenv's virtualenvs plugin 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+alias fnf='cd /mnt/KSS/Learnings/fsd/fnf/'
