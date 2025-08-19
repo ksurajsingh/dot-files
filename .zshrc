@@ -86,6 +86,7 @@ plugins=(
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+tmux source-file ~/.config/tmux/.tmux.conf
 
 # User configuration
 
@@ -178,6 +179,7 @@ alias neo='neofetch'
 alias mv='mv -v'
 alias rm='rm -v'
 alias cp='cp -v'
+alias prep='cd ~/sdc/rvce/placements/'
 
 export EDITOR=nvim
 export VISUAL=nvim
