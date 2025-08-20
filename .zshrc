@@ -90,6 +90,14 @@ setopt appendhistory
 # alias tdd='rsync -avhUPz phone:~/sdc/todo/ /mnt/KSS/Learnings/todo/ '
 
 
+# My functions 
+
+# rss stands for recent SS
+rss(){
+  loc="/mnt/KSS/backUps/poco/dcim/screenshots/"
+  ls -t "$loc"  | head -n "$1" | xargs -I {} cp "$loc{}" . 
+}
+
 
 
 # setting alias for faster workflow
@@ -194,6 +202,7 @@ alias fsd='cd /mnt/KSS/Learnings/fsd/ '
 alias ai='cd /mnt/KSS/Learnings/aiml/ '
 alias ops='cd /mnt/KSS/Learnings/devops/ '
 alias fun='cd /mnt/KSS/Learnings/fundamentals/ '
+alias gng='cd /mnt/KSS/Learnings/fundamentals/gitNgithub/'
 alias sec='cd /mnt/KSS/Learnings/cybersec/'
 alias diaryd='cd /mnt/KSS/Learnings/fsd/site/futurediary/'
 alias site='cd /mnt/KSS/Learnings/fsd/site/ '
