@@ -46,7 +46,7 @@ cursor_change_color(){
 }
 
 function postcmd(){
-  cursor_change_color
+  # cursor_change_color
 }
 
 precmd_functions+=(postcmd)
