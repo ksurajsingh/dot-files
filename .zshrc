@@ -13,6 +13,17 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+function sshere(){
+  local n=${1:-1}
+  local src='/mnt/KSS/backUps/poco/dcim/screenshots/'
+
+  ls -t "$src" | head -n "$n" | while read -r f; do 
+   cp "$src/$f" . 
+  done
+
+  echo "copied $n files from SS dir to curDir "
+}
+
 function load_silent(){ 
   tmux source-file ~/.config/tmux/.tmux.conf
   source $ZSH/oh-my-zsh.sh 
@@ -126,12 +137,6 @@ alias snapdocs='sudo btrfs subvolume snapshot /mnt/KSS/Documents /mnt/KSS/.btrfs
 alias snapbackups='sudo btrfs subvolume snapshot /mnt/KSS/backUps /mnt/KSS/.btrfssnapshots/backUps/backUps_snapshot_$(date +"%Y%m%d_%H%M%S") '
 alias snapmedia='sudo btrfs subvolume snapshot /mnt/KSS/Media /mnt/KSS/.btrfssnapshots/Media/Media_snapshot_$(date +"%Y%m%d_%H%M%S") '
 
-#.spm update
-alias spm2pn='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg phone:~/.spm/'
-alias spm2lap='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg laptop:/mnt/KSS/.btrfssnapshots/.spm/'
-alias spm2pc='rsync -avhUPz  /mnt/KSS/.btrfssnapshots/.spm/.spiderman.jpg pc:/mnt/KSS/.btrfssnapshots/.spm/'
-
-
 # Git 
 alias maingit=" git config --global user.name "ksurajsingh" && git config --global user.email "surajsinghk013@gmail.com" "
 alias ictgit=" git config --global user.name "ictttb" && git config --global user.email "ictttb@gmail.com" "
@@ -164,12 +169,11 @@ alias psongs='songs && mpv "$(fzf)" '
 # CLI
 alias lkey='gpg --list-keys --keyid-format long'
 alias lskey='gpg --list-secret-keys --keyid-format long'
-alias de='bash de'
-alias en='bash en'
 alias zshdown='cp ~/dot-files/.zshrc ~/.zshrc && source ~/.zshrc'
 alias garuda='nmcli connection up "Garuda 2.4Ghz"'
+alias garuda5='nmcli connection up "Garuda 2.4Ghz"'
 alias poconet='nmcli connection up "POCO M2"'
-alias ss='scrot -s /mnt/KSS/Media/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
+alias ss='scrot -s /mnt/KSS/backUps/poco/dcim/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png'
 alias nl='newlook'
 alias pnl='pkill newlook'
 alias rm='rm -v'
@@ -181,7 +185,6 @@ alias cpu='watch cpupower frequency-info'
 # Opening Stuff
 alias ran='ranger'
 alias calc='deepin-calculator'
-alias cod='nvim /mnt/KSS/.btrfssnapshots/.spm/.codes'
 alias nv='nvim'
 alias open='xdg-open'
 alias chrome='google-chrome-stable'
@@ -205,10 +208,6 @@ alias gng='cd /mnt/KSS/Learnings/fsd/site/fundamentals/gitNgithub/'
 alias sec='cd /mnt/KSS/Learnings/cybersec/'
 alias diaryd='cd /mnt/KSS/Learnings/fsd/site/futurediary/'
 alias site='cd /mnt/KSS/Learnings/fsd/site/ '
-alias el='cd /mnt/KSS/Learnings/rvce/6thsem/private/el/'
-alias idp='cd /mnt/KSS/Learnings/rvce/6thsem/private/idp/'
-alias lab='cd /mnt/KSS/Learnings/rvce/6thsem/lab/'
-alias label='cd /mnt/KSS/Learnings/rvce/6thsem/private/label/'
 alias hms='cd /mnt/KSS/Learnings/fsd/hms/ '
 alias dsa='cd /mnt/KSS/Learnings/dsa/'
 alias lan='cd /mnt/KSS/Learnings/fsd/site/fundamentals/lan/'
@@ -217,7 +216,6 @@ alias kss='cd /mnt/KSS/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
 alias todod='cd /mnt/KSS/Learnings/todo/'
 alias todo='nvim /mnt/KSS/Learnings/readme.md'
-alias spm='cd /mnt/KSS/.btrfssnapshots/.spm/'
 alias rvce='cd /mnt/KSS/Learnings/rvce/'
 alias sem='cd /mnt/KSS/Learnings/rvce/7thsem'
 alias backups='cd /mnt/KSS/backUps'
@@ -229,7 +227,6 @@ alias scripts='cd ~/scripts'
 alias media='cd /mnt/KSS/Media/'
 alias songs='cd /mnt/KSS/Media/songs/'
 alias hypr='cd ~/.config/hypr'
-alias fnf='cd /mnt/KSS/Learnings/fsd/fnf/'
 alias app='cd /mnt/KSS/Learnings/rvce/placements/applications/'
 alias intern='cd /mnt/KSS/Learnings/rvce/placements/gotplaced/internship_onetrust_10l_fte/'
 
