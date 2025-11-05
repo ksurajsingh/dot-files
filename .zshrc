@@ -228,7 +228,7 @@ alias media='cd /mnt/KSS/Media/'
 alias songs='cd /mnt/KSS/Media/songs/'
 alias hypr='cd ~/.config/hypr'
 alias app='cd /mnt/KSS/Learnings/rvce/placements/applications/'
-alias intern='cd /mnt/KSS/Learnings/rvce/placements/gotplaced/internship_onetrust_10l_fte/'
+alias intern='cd /mnt/KSS/Learnings/rvce/placements/gotplaced/onetrust/'
 
 
 # Created by `pipx` on 2024-12-29 05:42:19
