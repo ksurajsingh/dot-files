@@ -57,7 +57,7 @@ cursor_change_color(){
 }
 
 function postcmd(){
-  # cursor_change_color
+  cursor_change_color
 }
 
 precmd_functions+=(postcmd)
@@ -127,7 +127,7 @@ alias pn='mosh phone'
 alias pc='mosh pc'
 
 # Routines
-alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu && notify-send -u critical "Pacman-Update [pwd required]" && yay -Syu && notify-send "yay-Updated" || notify-send -u critical "password-required" && echo -e "\n\nArch Successfully Updated\n" '
+alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu && notify-send -u critical "Pacman-Update [pwd required]" && yay -Syu --needed && notify-send "yay-Updated" || notify-send -u critical "password-required" && echo -e "\n\nArch Successfully Updated\n" '
 alias ref='sudo reflector --country 'India' --latest 5 --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syy'
 
 # snapshots
