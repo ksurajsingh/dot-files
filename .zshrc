@@ -188,7 +188,7 @@ alias calc='deepin-calculator'
 alias nv='nvim'
 alias open='xdg-open'
 alias chrome='google-chrome-stable'
-alias zsh='nvim ~/.zshrc'
+alias zshe='nvim ~/.zshrc'
 
 # Navigation
 alias dots='cd ~/dot-files'
@@ -217,7 +217,7 @@ alias clips='cd /mnt/KSS/Media/clips/ '
 alias todod='cd /mnt/KSS/Learnings/todo/'
 alias todo='nvim /mnt/KSS/Learnings/todo/readme.md'
 alias rvce='cd /mnt/KSS/Learnings/rvce/'
-alias sem='cd /mnt/KSS/Learnings/rvce/7thsem'
+alias sem='cd /mnt/KSS/Learnings/rvce/8thsem'
 alias backups='cd /mnt/KSS/backUps'
 alias isos='cd /mnt/KSS/backUps/isos/'
 alias vms='cd /mnt/KSS/Learnings/cybersec/vms/'
@@ -236,6 +236,6 @@ export PATH="$PATH:/home/suraj/.local/bin"
 
 
 # for pyenv's virtualenvs plugin 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 alias fnf='cd /mnt/KSS/Learnings/fsd/fnf/'
