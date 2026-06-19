@@ -122,9 +122,9 @@ alias fast='fastfetch'
 alias pf='pfetch'
 
 # Devices
-alias lap='mosh laptop'
-alias pn='mosh phone'
-alias pc='mosh pc'
+alias lap='mosh debuglord'
+alias pn='mosh nord'
+alias pc='mosh warlord'
 
 # Routines
 alias archup='yay -Scc && sudo pacman -Scc && sudo pacman -Syu && notify-send -u critical "Pacman-Update [pwd required]" && yay -Syu --needed && notify-send "yay-Updated" || notify-send -u critical "password-required" && echo -e "\n\nArch Successfully Updated\n" '
@@ -147,7 +147,7 @@ alias gl='git log'
 alias gck='git checkout'
 alias gmg='git merge'
 alias ac=" git commit -am "Auto-commit" "
-alias gc=" git commit"
+alias gc='git commit --date "$(date +"%Y-%m-%d 04:00:00")"'
 alias devtomain="gph && gck main && gm dev && gph && gck dev" 
 alias dotpush='cd ~/dot-files && ac  && git push -f dots main'
 alias dotpull='cd ~/dot-files && git pull dots main'
@@ -214,8 +214,8 @@ alias lan='cd /mnt/KSS/Learnings/fsd/site/fundamentals/lan/'
 alias lrn='cd /mnt/KSS/Learnings/ '
 alias kss='cd /mnt/KSS/ '
 alias clips='cd /mnt/KSS/Media/clips/ '
-alias todod='cd /mnt/KSS/Learnings/todo/'
-alias todo='nvim /mnt/KSS/Learnings/todo/readme.md'
+alias todod='cd /mnt/KSS/Learnings/fsd/spring/todo'
+alias todo='chrome http//:localhost:4200'
 alias rvce='cd /mnt/KSS/Learnings/rvce/'
 alias sem='cd /mnt/KSS/Learnings/rvce/8thsem'
 alias backups='cd /mnt/KSS/backUps'
@@ -229,10 +229,23 @@ alias songs='cd /mnt/KSS/Media/songs/'
 alias hypr='cd ~/.config/hypr'
 alias app='cd /mnt/KSS/Learnings/rvce/placements/applications/'
 alias intern='cd /mnt/KSS/Learnings/rvce/placements/gotplaced/onetrust/'
+alias psa='ps aux | grep'
+alias hopp='~/./Hoppscotch_linux_x64.AppImage'
+alias ngr='npx ng serve --host 0.0.0.0 --allowed-hosts todo-ui'
+alias spr='mvn spring-boot:run'
+alias mydb='mariadb -p'
+alias sdwn='yt-dlp -x --audio-format mp3'
 
 
 # Created by `pipx` on 2024-12-29 05:42:19
 export PATH="$PATH:/home/suraj/.local/bin"
+
+# TODO config 
+source /mnt/KSS/Learnings/fsd/spring/todo/be/src/main/resources/path_to_env
+source $path_to_env
+export todo_db_url=$todo_db_url
+export todo_username=$sql_username
+export todo_pwd=$sql_pwd
 
 
 # for pyenv's virtualenvs plugin 
